@@ -2,16 +2,13 @@ programa {
   funcao inicio() {
 
    inteiro caracteres
-   real custotoken
+   real custotoken = 0.151
    inteiro tokens
    real custototal
 
 
    escreva("Digite o número de caracteres do prompt: ")
    leia(caracteres)
-
-   escreva("Digite o custo de cada token (em R$): ")
-   leia(custotoken)
 
    tokens = 5 + caracteres
    custototal =  tokens * custotoken
