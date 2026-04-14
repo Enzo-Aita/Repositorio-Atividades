@@ -25,7 +25,6 @@ programa {
 
  
     escreva("\n========================================")
-    escreva("\nRESUMO DA EXPEDIÇÃO:")
     escreva("\nFaturamento Bruto: R$ ", faturamentoTotal)
     escreva("\nCustos Operacionais: R$ ", gastosSuprimentos)
     escreva("\n----------------------------------------")
@@ -56,7 +55,5 @@ programa {
     } senao {
       escreva("Estamos estagnados. O faturamento apenas cobriu os custos.")
     }
-    
-    escreva("\n")
   }
 }
