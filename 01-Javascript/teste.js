@@ -28,17 +28,18 @@
 
 //PEBA 01
 //==================================
-// informações 
-let vitorias, empates
-let pontos
-// leitura
-vitorias = prompt("vitórias: ")
-vitorias = Number(vitorias)
+// // informações 
+// let vitorias, empates
+// let pontos
+// // leitura
+// vitorias = prompt("vitórias: ")
+// vitorias = Number(vitorias)
 
-empates = Number(prompt("Empates: "))
-// processamentos
-pontos = vitorias*3 + empates
-//saidas
-alert("Total de pontos: " + pontos)
+// empates = Number(prompt("Empates: "))
+// // processamentos
+// pontos = vitorias*3 + empates
+// //saidas
+// alert("Total de pontos: " + pontos)
 
-//===================================
+
+
