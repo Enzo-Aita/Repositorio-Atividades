@@ -10,4 +10,4 @@ dias = Number(prompt("Dias Trabalhados: "))
 // processo
 salarioDiario = salario / dias
 // saidas
-alert("Salário diário: R$ " + salarioDiario.toFixed(2))
+console.log("Salário diário: R$ " + salarioDiario.toFixed(2))
