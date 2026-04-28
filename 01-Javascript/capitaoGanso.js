@@ -12,8 +12,8 @@ faturamentoIngressos = Number(prompt("Faturamento com Ingressos: R$"))
 faturamentoItens = Number(prompt("Faturamento com Itens: R$"))
 // processos
 faturamentoTotal = faturamentoIngressos + faturamentoItens
-lucroReais = gastos - faturamentoTotal
-lucroPorcentagem =  gastos / lucroReais
+lucroReais = faturamentoTotal - gastos
+lucroPorcentagem =  lucroReais / gastos
 // saida
 console.log("Lucro final : "  + lucroReais)
 console.log("Lucro em porcentagem %: " + lucroPorcentagem)
