@@ -6,7 +6,7 @@ function openTab(evt, tabName) {
     // 1. Esconder todos os blocos de conteúdo
     const contents = document.querySelectorAll(".content");
     contents.forEach(c => c.classList.remove("active"));
-    
+
     // 2. Remover a classe 'active' de todos os botões das abas
     const buttons = document.querySelectorAll(".tab-btn");
     buttons.forEach(b => b.classList.remove("active"));
@@ -21,34 +21,50 @@ function openTab(evt, tabName) {
  * Fórmula: M = P * (1 + i)^n
  */
 function calcJuros() {
-    const p = parseFloat(document.getElementById('jc_cap').value);
-    let i = parseFloat(document.getElementById('jc_taxa').value) / 100;
-    let n = parseInt(document.getElementById('jc_tempo').value);
-    
+    const p_inicial = parseFloat(document.getElementById('jc_cap').value);
+    let taxa = parseFloat(document.getElementById('jc_taxa').value) / 100;
+    let tempo = parseInt(document.getElementById('jc_tempo').value);
+
     const tipoTaxa = document.getElementById('jc_tipo_taxa').value;
     const tipoTempo = document.getElementById('jc_tipo_tempo').value;
 
-    if (isNaN(p) || isNaN(i) || isNaN(n)) return alert("Preencha todos os campos!");
+    if (isNaN(p_inicial) || isNaN(taxa) || isNaN(tempo)) return alert("Preencha todos os campos!");
 
-    // LÓGICA DE CONVERSÃO:
-    // Se a taxa é mensal e o tempo está em anos, multiplicamos o tempo por 12
-    if (tipoTaxa === "mensal" && tipoTempo === "anos") {
-        n = n * 12;
-    } 
-    // Se a taxa é anual e o tempo está em meses, dividimos o tempo por 12
-    else if (tipoTaxa === "anual" && tipoTempo === "meses") {
-        n = n / 12;
-    }
+    // Ajuste de período (converte tudo para a unidade da taxa)
+    let n_calculo = tempo;
+    if (tipoTaxa === "mensal" && tipoTempo === "anos") n_calculo = tempo * 12;
+    if (tipoTaxa === "anual" && tipoTempo === "meses") n_calculo = tempo / 12;
 
-    // Fórmula: M = P * (1 + i)^n
-    const montante = p * Math.pow((1 + i), n);
-    const lucro = montante - p;
+    // Cálculo do Montante Final (Fórmula principal)
+    const montanteFinal = p_inicial * Math.pow((1 + taxa), n_calculo);
 
+    // Exibe o resumo
     const res = document.getElementById('res_jc');
     res.style.display = "block";
-    res.innerHTML = `Montante Final: <strong>R$ ${montante.toFixed(2)}</strong><br>
-                     Total em Juros: R$ ${lucro.toFixed(2)}<br>
-                     <small>Período calculado: ${n.toFixed(1)} ${tipoTaxa === "mensal" ? "meses" : "anos"}</small>`;
+    res.innerHTML = `Montante Final: <strong>R$ ${montanteFinal.toFixed(2)}</strong>`;
+
+    // GERAÇÃO DA TABELA DE EVOLUÇÃO
+    const table = document.getElementById('jc_table');
+    const tbody = document.getElementById('jc_body');
+    table.style.display = "table";
+    tbody.innerHTML = ""; // Limpa a tabela
+
+    let saldoAtual = p_inicial;
+    const labelPeriodo = tipoTaxa === "mensal" ? "Mês" : "Ano";
+
+    // Criamos uma linha para cada período (limitado a 360 para não travar o navegador)
+    for (let i = 1; i <= Math.min(n_calculo, 360); i++) {
+        let jurosDestePeriodo = saldoAtual * taxa;
+        let capitalAnterior = saldoAtual;
+        saldoAtual += jurosDestePeriodo;
+
+        tbody.innerHTML += `<tr>
+            <td>${labelPeriodo} ${i}</td>
+            <td>R$ ${capitalAnterior.toFixed(2)}</td>
+            <td>R$ ${jurosDestePeriodo.toFixed(2)}</td>
+            <td>R$ ${saldoAtual.toFixed(2)}</td>
+        </tr>`;
+    }
 }
 
 
@@ -83,7 +99,7 @@ function calcFin() {
     if (isNaN(pv) || isNaN(i) || isNaN(n)) return alert("Preencha os campos!");
 
     // Cálculo do valor da parcela fixa (Fórmula Price)
-    const pmt = pv * ( (i * Math.pow(1 + i, n)) / (Math.pow(1 + i, n) - 1) );
+    const pmt = pv * ((i * Math.pow(1 + i, n)) / (Math.pow(1 + i, n) - 1));
 
     // Exibe o resumo no topo
     const res = document.getElementById('res_fin');
@@ -115,7 +131,7 @@ function calcFin() {
             <td>R$ ${amortizacao.toFixed(2)}</td>
             <td>R$ ${Math.abs(saldoDevedor).toFixed(2)}</td>
         </tr>`;
-        
+
         tbody.innerHTML += row;
     }
 }

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Financeira Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="container">
@@ -15,7 +17,7 @@
             <button class="tab-btn" onclick="openTab(event, 'veiculo')">Financiamento</button>
         </nav>
 
-<section id="juros" class="content active">
+        <section id="juros" class="content active">
             <h2>Calculadora de Juros Compostos</h2>
             <p>Calcule o crescimento do seu dinheiro ao longo do tempo.</p>
             <div class="grid-form">
@@ -48,6 +50,19 @@
             </div>
             <button class="calc-btn" onclick="calcJuros()">Calcular Montante</button>
             <div id="res_jc" class="res-box" style="display:none"></div>
+            <div class="table-container">
+                <table id="jc_table" style="display:none">
+                    <thead>
+                        <tr>
+                            <th>Período</th>
+                            <th>Capital Inicial</th>
+                            <th>Juros do Período</th>
+                            <th>Montante Acumulado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jc_body"></tbody>
+                </table>
+            </div>
         </section>
 
         <section id="retorno" class="content">
@@ -85,7 +100,7 @@
                 </div>
             </div>
             <button class="calc-btn" onclick="calcFin()">Gerar Plano de Pagamento</button>
-            
+
             <div id="res_fin" class="res-box" style="display:none"></div>
 
             <div class="table-container">
@@ -104,14 +119,15 @@
             </div>
         </section>
         </section>
-        
+
         <footer class="main-footer">
             <p>Desenvolvido por: <strong>Enzo Aita, Pedro Borges </strong></p>
             <p>Instituição: <strong>Unisul</strong></p>
             <p>&copy; 2026 - Projeto de Calculadora Financeira</p>
         </footer>
-    </div> 
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
