@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'juros')">Juros Compostos</button>
+            <button class="tab-btn" onclick="openTab(event, 'retorno')">Prazo de Financiamento</button>
+            <button class="tab-btn" onclick="openTab(event, 'veiculo')">Financiamento</button>
+        </nav>
+
+<section id="juros" class="content active">
+            <h2>Calculadora de Juros Compostos</h2>
+            <p>Calcule o crescimento do seu dinheiro ao longo do tempo.</p>
+            <div class="grid-form">
+                <div class="field">
+                    <label>Capital Inicial (R$)</label>
+                    <input type="number" id="jc_cap" placeholder="Ex: 1000">
+                </div>
+                <div class="field">
+                    <label>Taxa de Juros (%)</label>
+                    <input type="number" id="jc_taxa" placeholder="Ex: 1">
+                </div>
+                <div class="field">
+                    <label>Tipo de Taxa</label>
+                    <select id="jc_tipo_taxa">
+                        <option value="mensal">Ao Mês</option>
+                        <option value="anual">Ao Ano</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Período</label>
+                    <input type="number" id="jc_tempo" placeholder="Ex: 12">
+                </div>
+                <div class="field">
+                    <label>Tipo de Período</label>
+                    <select id="jc_tipo_tempo">
+                        <option value="meses">Meses</option>
+                        <option value="anos">Anos</option>
+                    </select>
+                </div>
+            </div>
+            <button class="calc-btn" onclick="calcJuros()">Calcular Montante</button>
+            <div id="res_jc" class="res-box" style="display:none"></div>
+        </section>
+
+        <section id="retorno" class="content">
+            <h2>Retorno de Investimento (ROI)</h2>
+            <p>Saiba quanto e em quanto tempo você terá seu dinheiro de volta.</p>
+            <div class="grid-form">
+                <div class="field">
+                    <label>Investimento Inicial (R$)</label>
+                    <input type="number" id="roi_invest" placeholder="Ex: 5000">
+                </div>
+                <div class="field">
+                    <label>Ganho Mensal Esperado (R$)</label>
+                    <input type="number" id="roi_ganho" placeholder="Ex: 400">
+                </div>
+            </div>
+            <button class="calc-btn" onclick="calcROI()">Calcular Retorno</button>
+            <div id="res_roi" class="res-box" style="display:none"></div>
+        </section>
+
+        <section id="veiculo" class="content">
+            <h2>Financiamento (Tabela Price)</h2>
+            <p>Simule as parcelas do seu veículo com detalhamento mensal.</p>
+            <div class="grid-form">
+                <div class="field">
+                    <label>Valor do Veículo (R$)</label>
+                    <input type="number" id="fin_valor" placeholder="Ex: 45000">
+                </div>
+                <div class="field">
+                    <label>Taxa de Juros Mensal (%)</label>
+                    <input type="number" id="fin_taxa" placeholder="Ex: 1.8">
+                </div>
+                <div class="field">
+                    <label>Quantidade de Parcelas</label>
+                    <input type="number" id="fin_meses" placeholder="Ex: 48">
+                </div>
+            </div>
+            <button class="calc-btn" onclick="calcFin()">Gerar Plano de Pagamento</button>
+            
+            <div id="res_fin" class="res-box" style="display:none"></div>
+
+            <div class="table-container">
+                <table id="fin_table" style="display:none">
+                    <thead>
+                        <tr>
+                            <th>Mês</th>
+                            <th>Parcela</th>
+                            <th>Juros</th>
+                            <th>Amortização</th>
+                            <th>Saldo Devedor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fin_body"></tbody>
+                </table>
+            </div>
+        </section>
+        </section>
+        
+        <footer class="main-footer">
+            <p>Desenvolvido por: <strong>Enzo Aita, Pedro Borges </strong></p>
+            <p>Instituição: <strong>Unisul</strong></p>
+            <p>&copy; 2026 - Projeto de Calculadora Financeira</p>
+        </footer>
+    </div> 
+
+    <script src="script.js"></script>
+</body>
+</html>
