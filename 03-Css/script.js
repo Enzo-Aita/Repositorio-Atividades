@@ -1,23 +1,39 @@
 let resposta = document.getElementById('resultado')
 
 
+function jogoAdivinhacao() {
+    // INFOS
+    let numeroAleatorio = Math.floor(Math.random() * 10) + 1
+    let chute
 
-function verificarIdade(){
+    // ENTRADAS
+    chute = prompt("Tente adivinhar o número entre 1 e 10:");
+    // PROCESSAMENTOS
+
+    // SAIDAS
+    if (parseInt(chute) === numeroAleatorio) {
+        resposta.innerHTML = " Parabéns! Você acertou em cheio!";
+    } else {
+        resposta.innerHTML = "Que pena! O número correto era " + numeroAleatorio + ".";
+    }
+}
+
+function verificarIdade() {
     // INFOS
     let idade
 
     // ENTRADAS
-    idede = Number(prompt("Digite sua idade: "))
+    idade = Number(prompt("Digite sua idade: "))
     // PROCESSAMENTOS
-           
+
     // SAIDAS
-    if(idade >= 18){
-       resposta.innerHTML = "Você e maior de idade"
+    if (idade >= 18) {
+        resposta.innerHTML = "Você e maior de idade"
     } else {
         resposta.innerHTML = "Você e menor de idade"
     }
 }
-function verificarProvisoes(){
+function verificarProvisoes() {
     // infos
     let marujos, comida
     let comidaPorMarujo
@@ -27,19 +43,19 @@ function verificarProvisoes(){
     // processamentos
     comidaPorMarujo = comida / marujos
     // saidas
-    if(marujos >= 10 && comidaPorMarujo >= 1.5){ // ||
+    if (marujos >= 10 && comidaPorMarujo >= 1.5) { // ||
         document.getElementById('resultado').innerHTML = "<br>Provisões suficientes. <br>Rumo ao horizonte!"
-    }else{
+    } else {
         document.getElementById('resultado').innerHTML = "<br>Algo está errado. <br>Posseidom não quer ninguém no mar hoje."
     }
-    
+
 }
-function calcularChances(){
+function calcularChances() {
     // alert("Aqui vou calcular as chances das criancinhas...")
 
     document.getElementById("resultado").innerHTML = "Resultado das chances..."
 }
-function calcularPrecoBrique(){
+function calcularPrecoBrique() {
     // INFOS
     let precoCompra, precoVenda
     // LEITURAS 
