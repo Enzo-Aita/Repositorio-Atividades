@@ -17,7 +17,36 @@ function jogoAdivinhacao() {
         resposta.innerHTML = "Que pena! O número correto era " + numeroAleatorio + ".";
     }
 }
+function diasSemana() {
+    // INFOS
+    let numero;
+    let dia;
 
+    // ENTRADAS - Convertendo para número com parseInt
+    numero = parseInt(prompt("Digite um número de 1 a 7 para saber o dia da semana:"));
+
+    // PROCESSAMENTOS
+    if (numero === 1) {
+        dia = "Domingo";
+    } else if (numero === 2) {
+        dia = "Segunda-feira";
+    } else if (numero === 3) {
+        dia = "Terça-feira";
+    } else if (numero === 4) {
+        dia = "Quarta-feira";
+    } else if (numero === 5) {
+        dia = "Quinta-feira";
+    } else if (numero === 6) {
+        dia = "Sexta-feira";
+    } else if (numero === 7) {
+        dia = "Sábado";
+    } else {
+        dia = "Número inválido! Escolha entre 1 e 7.";
+    }
+
+    // SAIDAS
+    resposta.innerHTML = dia; 
+}
 function verificarIdade() {
     // INFOS
     let idade
