@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f0f2f5; /* Um cinza bem claro, mais confortável que o verde vibrante */
+    background-color: #ffffff; /* Um cinza bem claro, mais confortável que o verde vibrante */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;

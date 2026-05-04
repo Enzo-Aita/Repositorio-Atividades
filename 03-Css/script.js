@@ -1,3 +1,22 @@
+let resposta = document.getElementById('resultado')
+
+
+
+function verificarIdade(){
+    // INFOS
+    let idade
+
+    // ENTRADAS
+    idede = Number(prompt("Digite sua idade: "))
+    // PROCESSAMENTOS
+           
+    // SAIDAS
+    if(idade >= 18){
+       resposta.innerHTML = "Você e maior de idade"
+    } else {
+        resposta.innerHTML = "Você e menor de idade"
+    }
+}
 function verificarProvisoes(){
     // infos
     let marujos, comida
@@ -15,14 +34,11 @@ function verificarProvisoes(){
     }
     
 }
-
-
 function calcularChances(){
     // alert("Aqui vou calcular as chances das criancinhas...")
 
     document.getElementById("resultado").innerHTML = "Resultado das chances..."
 }
-
 function calcularPrecoBrique(){
     // INFOS
     let precoCompra, precoVenda
