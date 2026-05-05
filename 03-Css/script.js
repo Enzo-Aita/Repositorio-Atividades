@@ -3,7 +3,7 @@ let resposta = document.getElementById('resultado')
 
 function jogoAdivinhacao() {
     // INFOS
-    let numeroAleatorio = Math.floor(Math.random() * 10) + 1
+    let numeroAleatorio = Math.ceil(Math.random() * 10) 
     let chute
 
     // ENTRADAS
@@ -11,7 +11,7 @@ function jogoAdivinhacao() {
     // PROCESSAMENTOS
 
     // SAIDAS
-    if (parseInt(chute) === numeroAleatorio) {
+    if (Number(chute) === numeroAleatorio) {
         resposta.innerHTML = " Parabéns! Você acertou em cheio!";
     } else {
         resposta.innerHTML = "Que pena! O número correto era " + numeroAleatorio + ".";
@@ -23,7 +23,7 @@ function diasSemana() {
     let dia;
 
     // ENTRADAS - Convertendo para número com parseInt
-    numero = parseInt(prompt("Digite um número de 1 a 7 para saber o dia da semana:"));
+    numero = Number(prompt("Digite um número de 1 a 7 para saber o dia da semana:"));
 
     // PROCESSAMENTOS
     if (numero === 1) {
@@ -45,7 +45,57 @@ function diasSemana() {
     }
 
     // SAIDAS
-    resposta.innerHTML = dia; 
+    resposta.innerHTML = dia;
+}
+function verificandoNumerosPares() {
+    // INFOS 
+    let mensagem; 
+
+    //ENTRADAS
+    let numero = Number(prompt("Digite um número inteiro:"));
+
+
+    // PROCESSAMENTO
+    if (numero % 2 === 0) {
+        mensagem = "O número " + numero + " é PAR.";
+    } else {
+        mensagem = "O número " + numero + " é ÍMPAR.";
+    }
+
+    // SAIDAS
+    resposta.innerHTML = mensagem;
+}
+function calculadoraSimples() {
+    // ENTRADAS
+    let num1 = Number(prompt("Digite o primeiro número:"));
+    let operacao = prompt("Digite a operação (+, -, *, /):");
+    let num2 = Number(prompt("Digite o segundo número:"));
+    
+    let resultado;
+
+    // PROCESSAMENTO
+    if (operacao === "+") {
+        resultado = num1 + num2;
+    } else if (operacao === "-") {
+        resultado = num1 - num2;
+    } else if (operacao === "*") {
+        resultado = num1 * num2;
+    } else if (operacao === "/") {
+        // Verificação para não dividir por zero
+        if (num2 !== 0) {
+            resultado = num1 / num2;
+        } else {
+            resultado = "Erro: Divisão por zero!";
+        }
+    } else {
+        resultado = "Operação inválida!";
+    }
+
+    // SAÍDAS
+    let mensagemFinal = "Resultado: " + resultado;
+
+    resposta.innerHTML = mensagemFinal;
+    
 }
 function verificarIdade() {
     // INFOS
