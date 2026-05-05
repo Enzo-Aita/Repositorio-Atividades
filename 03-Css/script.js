@@ -3,7 +3,7 @@ let resposta = document.getElementById('resultado')
 
 function jogoAdivinhacao() {
     // INFOS
-    let numeroAleatorio = Math.ceil(Math.random() * 10) 
+    let numeroAleatorio = Math.ceil(Math.random() * 10)
     let chute
 
     // ENTRADAS
@@ -49,7 +49,7 @@ function diasSemana() {
 }
 function verificandoNumerosPares() {
     // INFOS 
-    let mensagem; 
+    let mensagem;
 
     //ENTRADAS
     let numero = Number(prompt("Digite um número inteiro:"));
@@ -70,7 +70,7 @@ function calculadoraSimples() {
     let num1 = Number(prompt("Digite o primeiro número:"));
     let operacao = prompt("Digite a operação (+, -, *, /):");
     let num2 = Number(prompt("Digite o segundo número:"));
-    
+
     let resultado;
 
     // PROCESSAMENTO
@@ -95,7 +95,23 @@ function calculadoraSimples() {
     let mensagemFinal = "Resultado: " + resultado;
 
     resposta.innerHTML = mensagemFinal;
-    
+
+}
+function validarSenha() {
+    // ENTRADAS
+    let senha
+    let mensagem;
+    // ENTRADA
+    senha = prompt("Crie uma nova senha (mínimo de 8 caracteres):");
+    // PROCESSAMENTO
+    if (senha.length >= 8) {
+        mensagem = " Senha válida e segura!";
+    } else {
+        mensagem = "Erro: deve ter pelo menos 8 caracteres.";
+    }
+
+    // SAIDAS
+    resposta.innerHTML = mensagem;
 }
 function verificarIdade() {
     // INFOS
@@ -146,4 +162,22 @@ function calcularPrecoBrique() {
     alert("Preço para venda: R$" + precoVenda.toFixed(2));
 
     document.getElementById("resultado").innerHTML = "Preço para venda: R$" + precoVenda.toFixed(2)
+}
+function calcularNotas() {
+    // INFOS
+    let notas
+    // ENTRADA
+    notas = Number(prompt("Digite sua nota"))
+    // PROCESSAMENTO
+    // SAIDAS
+    if (notas >= 81 && notas <= 100) {
+        resposta.innerHTML = "Nota: A"
+    } else if (notas >= 61 && notas <= 80) {
+        resposta.innerHTML = "Nota: B"
+    } else if (notas >= 41 && notas <= 60) {
+        resposta.innerHTML = "Nota: C"
+    } else if (notas >= 21 && notas <= 40) {
+        resposta.innerHTML = "Nota: D"
+    } else (notas >= 0 && notas <= 20)
+        resposta.innerHTML = "Nota: E"
 }
