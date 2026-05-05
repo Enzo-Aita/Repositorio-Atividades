@@ -26,19 +26,19 @@ function diasSemana() {
     numero = Number(prompt("Digite um número de 1 a 7 para saber o dia da semana:"))
 
     // PROCESSAMENTOS
-    if (numero === 1) {
+    if (numero == 1) {
         dia = "Domingo";
-    } else if (numero === 2) {
+    } else if (numero == 2) {
         dia = "Segunda-feira"
-    } else if (numero === 3) {
+    } else if (numero == 3) {
         dia = "Terça-feira"
-    } else if (numero === 4) {
+    } else if (numero == 4) {
         dia = "Quarta-feira"
-    } else if (numero === 5) {
+    } else if (numero == 5) {
         dia = "Quinta-feira"
-    } else if (numero === 6) {
+    } else if (numero == 6) {
         dia = "Sexta-feira"
-    } else if (numero === 7) {
+    } else if (numero == 7) {
         dia = "Sábado"
     } else {
         dia = "Número inválido! Escolha entre 1 e 7."
@@ -56,7 +56,7 @@ function verificandoNumerosPares() {
 
 
     // PROCESSAMENTO
-    if (numero % 2 === 0) {
+    if (numero % 2 == 0) {
         mensagem = "O número " + numero + " é PAR."
     } else {
         mensagem = "O número " + numero + " é ÍMPAR."
@@ -239,6 +239,38 @@ function decisaoCompra(){
         resposta.innerHTML = "Saldo insuficiente"
     } else {
         resposta.innerHTML = "Saldo suficiente"
+        
+    }
+}
+function idadeCachoro(){
+    // INFOS
+    let idade
+    let idadeHumana
+    // ENTRADAS
+    idade = Number(prompt("Digite a idade do cachorro"))
+    // PROCESSAENTO
+    idadeHumana = idade * 7
+    // SAIDAS
+    if (idadeHumana >= 65) {
+        resposta.innerHTML = "pode se aposentar"
+        
+    } else {
+        resposta.innerHTML = "Não pode se aposentar"
+    }
+
+    
+}
+function idadeVoto(){
+    // INFOS
+    let idade
+    // ENTRADAS
+    idade = Number(prompt("Digite sua idade: "))
+    // PROCESSAMENTO
+    // SAIDAS
+    if (idade < 16) {
+        resposta.innerHTML = "Não pode votar"
+    } else {
+        resposta.innerHTML = "Pode votar"
         
     }
 }
