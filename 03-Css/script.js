@@ -12,54 +12,54 @@ function jogoAdivinhacao() {
 
     // SAIDAS
     if (Number(chute) === numeroAleatorio) {
-        resposta.innerHTML = " Parabéns! Você acertou em cheio!";
+        resposta.innerHTML = " Parabéns! Você acertou em cheio!"
     } else {
-        resposta.innerHTML = "Que pena! O número correto era " + numeroAleatorio + ".";
+        resposta.innerHTML = "Que pena! O número correto era " + numeroAleatorio + "."
     }
 }
 function diasSemana() {
     // INFOS
-    let numero;
-    let dia;
+    let numero
+    let dia
 
     // ENTRADAS - Convertendo para número com parseInt
-    numero = Number(prompt("Digite um número de 1 a 7 para saber o dia da semana:"));
+    numero = Number(prompt("Digite um número de 1 a 7 para saber o dia da semana:"))
 
     // PROCESSAMENTOS
     if (numero === 1) {
         dia = "Domingo";
     } else if (numero === 2) {
-        dia = "Segunda-feira";
+        dia = "Segunda-feira"
     } else if (numero === 3) {
-        dia = "Terça-feira";
+        dia = "Terça-feira"
     } else if (numero === 4) {
-        dia = "Quarta-feira";
+        dia = "Quarta-feira"
     } else if (numero === 5) {
-        dia = "Quinta-feira";
+        dia = "Quinta-feira"
     } else if (numero === 6) {
-        dia = "Sexta-feira";
+        dia = "Sexta-feira"
     } else if (numero === 7) {
-        dia = "Sábado";
+        dia = "Sábado"
     } else {
-        dia = "Número inválido! Escolha entre 1 e 7.";
+        dia = "Número inválido! Escolha entre 1 e 7."
     }
 
     // SAIDAS
-    resposta.innerHTML = dia;
+    resposta.innerHTML = dia
 }
 function verificandoNumerosPares() {
     // INFOS 
-    let mensagem;
+    let mensagem
 
     //ENTRADAS
-    let numero = Number(prompt("Digite um número inteiro:"));
+    let numero = Number(prompt("Digite um número inteiro:"))
 
 
     // PROCESSAMENTO
     if (numero % 2 === 0) {
-        mensagem = "O número " + numero + " é PAR.";
+        mensagem = "O número " + numero + " é PAR."
     } else {
-        mensagem = "O número " + numero + " é ÍMPAR.";
+        mensagem = "O número " + numero + " é ÍMPAR."
     }
 
     // SAIDAS
@@ -67,34 +67,34 @@ function verificandoNumerosPares() {
 }
 function calculadoraSimples() {
     // ENTRADAS
-    let num1 = Number(prompt("Digite o primeiro número:"));
-    let operacao = prompt("Digite a operação (+, -, *, /):");
-    let num2 = Number(prompt("Digite o segundo número:"));
+    let num1 = Number(prompt("Digite o primeiro número:"))
+    let operacao = prompt("Digite a operação (+, -, *, /):")
+    let num2 = Number(prompt("Digite o segundo número:"))
 
-    let resultado;
+    let resultado
 
     // PROCESSAMENTO
     if (operacao === "+") {
-        resultado = num1 + num2;
+        resultado = num1 + num2
     } else if (operacao === "-") {
-        resultado = num1 - num2;
+        resultado = num1 - num2
     } else if (operacao === "*") {
-        resultado = num1 * num2;
+        resultado = num1 * num2
     } else if (operacao === "/") {
         // Verificação para não dividir por zero
         if (num2 !== 0) {
-            resultado = num1 / num2;
+            resultado = num1 / num2
         } else {
-            resultado = "Erro: Divisão por zero!";
+            resultado = "Erro: Divisão por zero!"
         }
     } else {
-        resultado = "Operação inválida!";
+        resultado = "Operação inválida!"
     }
 
     // SAÍDAS
-    let mensagemFinal = "Resultado: " + resultado;
+    let mensagemFinal = "Resultado: " + resultado
 
-    resposta.innerHTML = mensagemFinal;
+    resposta.innerHTML = mensagemFinal
 
 }
 function validarSenha() {
@@ -180,4 +180,35 @@ function calcularNotas() {
         resposta.innerHTML = "Nota: D"
     } else (notas >= 0 && notas <= 20)
         resposta.innerHTML = "Nota: E"
+}
+function comparacaoNumeros(){
+    // INFOS
+    let numero1
+    let numero2
+    // ENTRADAS
+    numero1 = Number(prompt("Digite o primeiro número: "))
+    numero2 = Number(prompt("Digite o segundo número: "))
+
+    // PROCESSAMENTO
+    if(numero1 > numero2){
+        resposta.innerHTML = "Número 1 é Maior"
+
+    } else {
+        resposta.innerHTML ="Número 2 é Maior"
+    }
+    // SAIDAS
+}
+function mensagemSecreta(){
+    // INFOS
+    let senha
+    // ENTRADAS
+    senha = prompt("Digite sua senha: ")
+    // PROCESSAMENTO
+    // SAIDAS
+    if(senha === "abracadabra"){
+        resposta.innerHTML = "Senha correta"
+    } else {
+        resposta.innerHTML ="Senha incorreta"
+    }
+
 }
