@@ -205,10 +205,40 @@ function mensagemSecreta(){
     senha = prompt("Digite sua senha: ")
     // PROCESSAMENTO
     // SAIDAS
-    if(senha === "abracadabra"){
+    if(senha == "abracadabra"){
         resposta.innerHTML = "Senha correta"
     } else {
         resposta.innerHTML ="Senha incorreta"
     }
 
+}
+function anoBissexto(){
+    // INFOS
+    let ano
+    // ENTRADAS
+    ano = Number(prompt("Digite o ano "))
+    // PROCESSAMENTO
+    // SAIDAS
+    if (ano === 366) {
+        resposta.innerHTML = "ano Bissexto"
+    } else {
+        resposta.innerHTML = "Não é ano Bissexto"
+        
+    }
+}
+function decisaoCompra(){
+    // INFOS
+    let preco
+    let saldo
+    // ENTRADAS
+    preco = Number(prompt("Digite o preço da compra: "))
+    saldo = Number(prompt("Digite o Saldo da conta: "))
+    // PROCESSAMENTO
+    // SAIDAS
+    if (preco > saldo) {
+        resposta.innerHTML = "Saldo insuficiente"
+    } else {
+        resposta.innerHTML = "Saldo suficiente"
+        
+    }
 }
