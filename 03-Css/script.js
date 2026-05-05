@@ -274,3 +274,35 @@ function idadeVoto(){
         
     }
 }
+function calculadoraIMC(){
+    // INFOS
+    let peso
+    let altura
+    let imc
+    // ENTRADAS
+    peso = Number(prompt("Digite seu peso:"))
+    altura = Number(prompt("Digite sua altura:"))
+    // PROCESSAMENTO
+    imc = peso / (altura * altura)
+    // SAIDAS
+    if (imc > 25) {
+        resposta.innerHTML = "imc ALTO"
+    } else {
+        resposta.innerHTML = "imc Normal"
+    }
+}
+function calcularTemperatura(){
+    // INFOS
+    let temperaturaC
+    let temperaturaF
+    // ENTRADAS
+    temperaturaC = Number(prompt("Digite a temperatura: "))
+    // PROCESSAMENTO
+    temperaturaF = (temperaturaC * 9/5) + 32
+    // SAIDAS
+    if (temperaturaF > 68) {
+        resposta.innerHTML = "Alerta de calor"
+    } else {
+        resposta.innerHTML = "Temperatura normal"
+    }
+}
