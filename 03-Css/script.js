@@ -306,3 +306,35 @@ function calcularTemperatura(){
         resposta.innerHTML = "Temperatura normal"
     }
 }
+function letras(){
+    // INFOS
+    let letra
+    // ENTRADAS
+    letra = prompt("Digite a letra")
+    // PROCESSAMENTO
+    // SAIDAS
+    if (letra == letra.toUpperCase()) {
+        resposta.innerHTML = "Letra Maiúscula"
+        
+    } else if (letra == letra.toLowerCase()){
+        resposta.innerHTML = "Letra Minúscula"
+    } else {
+        resposta.innerHTML = "Letras Maiúsculas e Minúsculas "
+    }
+}
+function tamanhoPizza(){
+    // INFOS
+    let tamanho
+    // ENTRADAS
+    tamanho = prompt("digite o Tamahho da pizza ( P , M , G):")
+    // PROCESSAMENTO
+    // SAIDAS
+    if (tamanho == "P") {
+        resposta.innerHTML = "Preço da pizza Pequena é R$ 15,00"
+        
+    } else if (tamanho == "M") {
+        resposta.innerHTML = "Preço da pizza Média é R$ 25,00"        
+    } else if (tamanho == "G") {
+        resposta.innerHTML = "Preço da pizza Grande é R$ 40,00"
+    }
+}
