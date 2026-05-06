@@ -336,5 +336,29 @@ function tamanhoPizza(){
         resposta.innerHTML = "Preço da pizza Média é R$ 25,00"        
     } else if (tamanho == "G") {
         resposta.innerHTML = "Preço da pizza Grande é R$ 40,00"
+    } else {
+        resposta.innerHTML = "Digite um tamanho válido"
     }
+}
+function convercaoMoeda(){
+    // INFOS
+    let moeda
+    let escolha
+    let euro
+    let dolar
+    // ENTRADA
+    moeda = Number(prompt("Digite o valor em Reais"))
+    escolha = prompt("Escolha entre Euro ou Dolar")
+    // PROCESSAMENTO
+    euro = moeda * 5.78
+    dolar = moeda * 4.93
+    // SAIDA
+    if (escolha == "Euro") {
+        resposta.innerHTML = "Valor em euro: " + euro
+    } else if (escolha == "Dolar") {
+        resposta.innerHTML = "Valor em dolar: " + dolar
+    } else {
+        resposta.innerHTML = "escolha um valor válido"
+    }
+
 }
