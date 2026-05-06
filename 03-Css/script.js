@@ -340,7 +340,7 @@ function tamanhoPizza(){
         resposta.innerHTML = "Digite um tamanho válido"
     }
 }
-function convercaoMoeda(){
+function conversaoMoeda(){
     // INFOS
     let moeda
     let escolha
