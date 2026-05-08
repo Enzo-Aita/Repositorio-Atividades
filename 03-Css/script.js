@@ -179,9 +179,9 @@ function calcularNotas() {
     } else if (notas >= 21 && notas <= 40) {
         resposta.innerHTML = "Nota: D"
     } else (notas >= 0 && notas <= 20)
-        resposta.innerHTML = "Nota: E"
+    resposta.innerHTML = "Nota: E"
 }
-function comparacaoNumeros(){
+function comparacaoNumeros() {
     // INFOS
     let numero1
     let numero2
@@ -190,29 +190,29 @@ function comparacaoNumeros(){
     numero2 = Number(prompt("Digite o segundo número: "))
 
     // PROCESSAMENTO
-    if(numero1 > numero2){
+    if (numero1 > numero2) {
         resposta.innerHTML = "Número 1 é Maior"
 
     } else {
-        resposta.innerHTML ="Número 2 é Maior"
+        resposta.innerHTML = "Número 2 é Maior"
     }
     // SAIDAS
 }
-function mensagemSecreta(){
+function mensagemSecreta() {
     // INFOS
     let senha
     // ENTRADAS
     senha = prompt("Digite sua senha: ")
     // PROCESSAMENTO
     // SAIDAS
-    if(senha == "abracadabra"){
+    if (senha == "abracadabra") {
         resposta.innerHTML = "Senha correta"
     } else {
-        resposta.innerHTML ="Senha incorreta"
+        resposta.innerHTML = "Senha incorreta"
     }
 
 }
-function anoBissexto(){
+function anoBissexto() {
     // INFOS
     let ano
     // ENTRADAS
@@ -223,10 +223,10 @@ function anoBissexto(){
         resposta.innerHTML = "ano Bissexto"
     } else {
         resposta.innerHTML = "Não é ano Bissexto"
-        
+
     }
 }
-function decisaoCompra(){
+function decisaoCompra() {
     // INFOS
     let preco
     let saldo
@@ -239,10 +239,10 @@ function decisaoCompra(){
         resposta.innerHTML = "Saldo insuficiente"
     } else {
         resposta.innerHTML = "Saldo suficiente"
-        
+
     }
 }
-function idadeCachoro(){
+function idadeCachoro() {
     // INFOS
     let idade
     let idadeHumana
@@ -253,14 +253,12 @@ function idadeCachoro(){
     // SAIDAS
     if (idadeHumana >= 65) {
         resposta.innerHTML = "pode se aposentar"
-        
     } else {
         resposta.innerHTML = "Não pode se aposentar"
     }
 
-    
 }
-function idadeVoto(){
+function idadeVoto() {
     // INFOS
     let idade
     // ENTRADAS
@@ -271,10 +269,10 @@ function idadeVoto(){
         resposta.innerHTML = "Não pode votar"
     } else {
         resposta.innerHTML = "Pode votar"
-        
+
     }
 }
-function calculadoraIMC(){
+function calculadoraIMC() {
     // INFOS
     let peso
     let altura
@@ -291,14 +289,14 @@ function calculadoraIMC(){
         resposta.innerHTML = "imc Normal"
     }
 }
-function calcularTemperatura(){
+function calcularTemperatura() {
     // INFOS
     let temperaturaC
     let temperaturaF
     // ENTRADAS
     temperaturaC = Number(prompt("Digite a temperatura: "))
     // PROCESSAMENTO
-    temperaturaF = (temperaturaC * 9/5) + 32
+    temperaturaF = (temperaturaC * 9 / 5) + 32
     // SAIDAS
     if (temperaturaF > 68) {
         resposta.innerHTML = "Alerta de calor"
@@ -306,7 +304,7 @@ function calcularTemperatura(){
         resposta.innerHTML = "Temperatura normal"
     }
 }
-function letras(){
+function letras() {
     // INFOS
     let letra
     // ENTRADAS
@@ -315,14 +313,14 @@ function letras(){
     // SAIDAS
     if (letra == letra.toUpperCase()) {
         resposta.innerHTML = "Letra Maiúscula"
-        
-    } else if (letra == letra.toLowerCase()){
+
+    } else if (letra == letra.toLowerCase()) {
         resposta.innerHTML = "Letra Minúscula"
     } else {
         resposta.innerHTML = "Letras Maiúsculas e Minúsculas "
     }
 }
-function tamanhoPizza(){
+function tamanhoPizza() {
     // INFOS
     let tamanho
     // ENTRADAS
@@ -331,16 +329,16 @@ function tamanhoPizza(){
     // SAIDAS
     if (tamanho == "P") {
         resposta.innerHTML = "Preço da pizza Pequena é R$ 15,00"
-        
+
     } else if (tamanho == "M") {
-        resposta.innerHTML = "Preço da pizza Média é R$ 25,00"        
+        resposta.innerHTML = "Preço da pizza Média é R$ 25,00"
     } else if (tamanho == "G") {
         resposta.innerHTML = "Preço da pizza Grande é R$ 40,00"
     } else {
         resposta.innerHTML = "Digite um tamanho válido"
     }
 }
-function conversaoMoeda(){
+function conversaoMoeda() {
     // INFOS
     let moeda
     let escolha
@@ -362,3 +360,73 @@ function conversaoMoeda(){
     }
 
 }
+function desafio46() {
+    // INFO
+    let distancia
+    let velocidade = 300000
+    let tempoSegundos
+    let minutos
+    let horas
+    let dias
+    let meses
+    let ano
+    let mensagem
+    // ENTRADA
+    distancia = Number(prompt("Digite a distacia em km: "))
+    // PROCESSAMENTO
+    tempoSegundos = distancia / velocidade
+    mensagem = "<p>" + "Tempo em segundos: " + tempoSegundos + "</p>"
+    // SAIDA
+    if (tempoSegundos >= 60) {
+        minutos = tempoSegundos / 60
+        mensagem = "<p>" + mensagem + " Tempo em minutos: " + minutos + "</p>"
+    } if (tempoSegundos >= 3600) {
+        horas = tempoSegundos / 3600
+        mensagem = "<p>" + mensagem + " Tempo em horas: " + horas + "</p>"
+    } if (tempoSegundos >= 86400) {
+        dias = tempoSegundos / 86400
+        mensagem = "<p>" + mensagem + " Tempo em dias: " + dias + "</p>"
+    } if (tempoSegundos >= 2592000) {
+        meses = tempoSegundos / 2592000
+        mensagem = "<p>" + mensagem + " Tempo em meses: " + meses + "</p>"
+    } if (tempoSegundos >= 31104000) {
+        ano = tempoSegundos / 31104000
+        mensagem = "<p>" + mensagem + " Tempo em ano: " + ano + "</p>"
+
+
+
+    }
+
+
+
+
+
+
+
+
+    // } if (tempoSegundos >= 86400 ){
+    //     dias = tempoSegundos / 86400
+    //     mensagem = "<p>" + mensagem + "Tempo em dias: " + dias + "</p>"
+
+    document.getElementById("resultado").innerHTML = mensagem
+}
+function donaBet() {
+    // INFOS
+    let valorBruto
+    let premiacoes
+    let presentes
+    let comissoes
+    let lucroFinal
+
+    // ENTRADA
+    valorBruto = Number(prompt("Valor bruto: R$ "))
+    premiacoes = Number(prompt("Valor em premiações: R$ "))
+    presentes = Number(prompt("Valor dos presentes: R$ "))
+    comissoes = Number(prompt("Valor das comissões: R$ "))
+    // PROCESSAMENTO
+    lucroFinal = valorBruto - premiacoes - presentes - comissoes
+    // SAIDAS
+    resposta.innerHTML = "Lucro final da Dona Bete: R$" + lucroFinal
+}
+
+

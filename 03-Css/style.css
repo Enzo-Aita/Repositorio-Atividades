@@ -1,4 +1,4 @@
-body{
+body {
     background-color: rgba(64, 57, 68, 0.39);
 }
 
@@ -10,7 +10,7 @@ output {
     font-size: larger;
 }
 
-button{
+button {
     background-color: #000000;
     color: #ffffff;
     padding: 5px;
