@@ -360,6 +360,24 @@ function conversaoMoeda() {
     }
 
 }
+function donaBet() {
+    // INFOS
+    let valorBruto
+    let premiacoes
+    let presentes
+    let comissoes
+    let lucroFinal
+
+    // ENTRADA
+    valorBruto = Number(prompt("Valor bruto: R$ "))
+    premiacoes = Number(prompt("Valor em premiações: R$ "))
+    presentes = Number(prompt("Valor dos presentes: R$ "))
+    comissoes = Number(prompt("Valor das comissões: R$ "))
+    // PROCESSAMENTO
+    lucroFinal = valorBruto - premiacoes - presentes - comissoes
+    // SAIDAS
+    resposta.innerHTML = "Lucro final da Dona Bete: R$" + lucroFinal
+}
 function desafio46() {
     // INFO
     let distancia
@@ -396,37 +414,5 @@ function desafio46() {
 
 
     }
-
-
-
-
-
-
-
-
-    // } if (tempoSegundos >= 86400 ){
-    //     dias = tempoSegundos / 86400
-    //     mensagem = "<p>" + mensagem + "Tempo em dias: " + dias + "</p>"
-
     document.getElementById("resultado").innerHTML = mensagem
 }
-function donaBet() {
-    // INFOS
-    let valorBruto
-    let premiacoes
-    let presentes
-    let comissoes
-    let lucroFinal
-
-    // ENTRADA
-    valorBruto = Number(prompt("Valor bruto: R$ "))
-    premiacoes = Number(prompt("Valor em premiações: R$ "))
-    presentes = Number(prompt("Valor dos presentes: R$ "))
-    comissoes = Number(prompt("Valor das comissões: R$ "))
-    // PROCESSAMENTO
-    lucroFinal = valorBruto - premiacoes - presentes - comissoes
-    // SAIDAS
-    resposta.innerHTML = "Lucro final da Dona Bete: R$" + lucroFinal
-}
-
-
