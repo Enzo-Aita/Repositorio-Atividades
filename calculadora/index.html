@@ -1,133 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Financeira Pro</title>
+    <title>Calculadora Financeira A3 - MCA</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <div class="container">
+            <h1>Calculadora Financeira A3</h1>
+            <p>Matemática Computacional Aplicada</p>
+        </div>
+    </header>
 
-    <div class="container">
+    <main class="container">
         <nav class="tabs">
-            <button class="tab-btn active" onclick="openTab(event, 'juros')">Juros Compostos</button>
-            <button class="tab-btn" onclick="openTab(event, 'retorno')">Prazo de Financiamento</button>
-            <button class="tab-btn" onclick="openTab(event, 'veiculo')">Financiamento</button>
+            <button class="tab-btn active" onclick="openTab('financiamento')">Financiamento de Veículos</button>
+            <button class="tab-btn" onclick="openTab('juros')">Juros Compostos</button>
+            <button class="tab-btn" onclick="openTab('prazo')">Prazo de Investimento</button>
         </nav>
 
-        <section id="juros" class="content active">
+        <!-- Seção Financiamento -->
+        <section id="financiamento" class="tab-content active">
+            <h2>Financiamento de Veículos (SAC/PRICE)</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="form-group">
+                        <label for="fin-valor">Valor do Empréstimo (R$):</label>
+                        <input type="number" id="fin-valor" value="50000" step="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="fin-taxa">Taxa de Juros (% ao mês):</label>
+                        <input type="number" id="fin-taxa" value="1.5" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="fin-tempo">Tempo (meses):</label>
+                        <input type="number" id="fin-tempo" value="48">
+                    </div>
+                    <div class="form-group">
+                        <label for="fin-sistema">Sistema de Amortização:</label>
+                        <select id="fin-sistema">
+                            <option value="PRICE">PRICE</option>
+                            <option value="SAC">SAC</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="calcularFinanciamento()">Calcular</button>
+                </div>
+                <div class="card result-card">
+                    <h3>Resumo</h3>
+                    <div id="fin-resumo">Preencha os dados e calcule.</div>
+                </div>
+            </div>
+            <div class="card chart-container">
+                <h3>Gráfico de Evolução</h3>
+                <canvas id="fin-chart" width="800" height="400"></canvas>
+            </div>
+            <div class="card table-container">
+                <h3>Tabela Analítica</h3>
+                <div class="scroll-table">
+                    <table id="fin-tabela">
+                        <thead>
+                            <tr>
+                                <th>Parcela</th>
+                                <th>Prestação</th>
+                                <th>Juros</th>
+                                <th>Amortização</th>
+                                <th>Saldo Devedor</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Juros Compostos -->
+        <section id="juros" class="tab-content">
             <h2>Calculadora de Juros Compostos</h2>
-            <p>Calcule o crescimento do seu dinheiro ao longo do tempo.</p>
-            <div class="grid-form">
-                <div class="field">
-                    <label>Capital Inicial (R$)</label>
-                    <input type="number" id="jc_cap" placeholder="Ex: 1000">
+            <div class="grid">
+                <div class="card">
+                    <div class="form-group">
+                        <label for="jur-presente">Valor Presente (R$):</label>
+                        <input type="number" id="jur-presente" value="1000" step="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="jur-aporte">Aporte Mensal (R$):</label>
+                        <input type="number" id="jur-aporte" value="100" step="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="jur-taxa">Taxa de Juros (% ao mês):</label>
+                        <input type="number" id="jur-taxa" value="1" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="jur-tempo">Tempo (meses):</label>
+                        <input type="number" id="jur-tempo" value="12">
+                    </div>
+                    <button class="btn" onclick="calcularJuros()">Calcular</button>
                 </div>
-                <div class="field">
-                    <label>Taxa de Juros (%)</label>
-                    <input type="number" id="jc_taxa" placeholder="Ex: 1">
-                </div>
-                <div class="field">
-                    <label>Tipo de Taxa</label>
-                    <select id="jc_tipo_taxa">
-                        <option value="mensal">Ao Mês</option>
-                        <option value="anual">Ao Ano</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label>Período</label>
-                    <input type="number" id="jc_tempo" placeholder="Ex: 12">
-                </div>
-                <div class="field">
-                    <label>Tipo de Período</label>
-                    <select id="jc_tipo_tempo">
-                        <option value="meses">Meses</option>
-                        <option value="anos">Anos</option>
-                    </select>
+                <div class="card result-card">
+                    <h3>Resumo</h3>
+                    <div id="jur-resumo">Preencha os dados e calcule.</div>
                 </div>
             </div>
-            <button class="calc-btn" onclick="calcJuros()">Calcular Montante</button>
-            <div id="res_jc" class="res-box" style="display:none"></div>
-            <div class="table-container">
-                <table id="jc_table" style="display:none">
-                    <thead>
-                        <tr>
-                            <th>Período</th>
-                            <th>Capital Inicial</th>
-                            <th>Juros do Período</th>
-                            <th>Montante Acumulado</th>
-                        </tr>
-                    </thead>
-                    <tbody id="jc_body"></tbody>
-                </table>
+            <div class="card chart-container">
+                <h3>Gráfico de Crescimento</h3>
+                <canvas id="jur-chart" width="800" height="400"></canvas>
             </div>
-        </section>
-
-        <section id="retorno" class="content">
-            <h2>Retorno de Investimento (ROI)</h2>
-            <p>Saiba quanto e em quanto tempo você terá seu dinheiro de volta.</p>
-            <div class="grid-form">
-                <div class="field">
-                    <label>Investimento Inicial (R$)</label>
-                    <input type="number" id="roi_invest" placeholder="Ex: 5000">
+            <div class="card table-container">
+                <h3>Tabela Analítica</h3>
+                <div class="scroll-table">
+                    <table id="jur-tabela">
+                        <thead>
+                            <tr>
+                                <th>Mês</th>
+                                <th>Juros</th>
+                                <th>Aporte</th>
+                                <th>Total Investido</th>
+                                <th>Total Acumulado</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
-                <div class="field">
-                    <label>Ganho Mensal Esperado (R$)</label>
-                    <input type="number" id="roi_ganho" placeholder="Ex: 400">
-                </div>
-            </div>
-            <button class="calc-btn" onclick="calcROI()">Calcular Retorno</button>
-            <div id="res_roi" class="res-box" style="display:none"></div>
-        </section>
-
-        <section id="veiculo" class="content">
-            <h2>Financiamento (Tabela Price)</h2>
-            <p>Simule as parcelas do seu veículo com detalhamento mensal.</p>
-            <div class="grid-form">
-                <div class="field">
-                    <label>Valor do Veículo (R$)</label>
-                    <input type="number" id="fin_valor" placeholder="Ex: 45000">
-                </div>
-                <div class="field">
-                    <label>Taxa de Juros Mensal (%)</label>
-                    <input type="number" id="fin_taxa" placeholder="Ex: 1.8">
-                </div>
-                <div class="field">
-                    <label>Quantidade de Parcelas</label>
-                    <input type="number" id="fin_meses" placeholder="Ex: 48">
-                </div>
-            </div>
-            <button class="calc-btn" onclick="calcFin()">Gerar Plano de Pagamento</button>
-
-            <div id="res_fin" class="res-box" style="display:none"></div>
-
-            <div class="table-container">
-                <table id="fin_table" style="display:none">
-                    <thead>
-                        <tr>
-                            <th>Mês</th>
-                            <th>Parcela</th>
-                            <th>Juros</th>
-                            <th>Amortização</th>
-                            <th>Saldo Devedor</th>
-                        </tr>
-                    </thead>
-                    <tbody id="fin_body"></tbody>
-                </table>
             </div>
         </section>
-        </section>
 
-        <footer class="main-footer">
-            <p>Desenvolvido por: <strong>Enzo Aita, Pedro Borges </strong></p>
-            <p>Instituição: <strong>Unisul</strong></p>
-            <p>&copy; 2026 - Projeto de Calculadora Financeira</p>
-        </footer>
-    </div>
+        <!-- Seção Prazo de Investimento -->
+        <section id="prazo" class="tab-content">
+            <h2>Prazo de Investimento</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="form-group">
+                        <label for="prz-inicial">Investimento Inicial (R$):</label>
+                        <input type="number" id="prz-inicial" value="10000" step="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="prz-mensal">Investimento Mensal (opcional):</label>
+                        <input type="number" id="prz-mensal" value="500" step="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="prz-taxa">Taxa Selic (% ao ano):</label>
+                        <input type="number" id="prz-taxa" value="10.75" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="prz-tempo">Tempo de Investimento (Meses):</label>
+                        <input type="number" id="prz-tempo" value="12">
+                    </div>
+                    <button class="btn" onclick="calcularPrazo()">Calcular</button>
+                </div>
+                <div class="card result-card">
+                    <h3>Resumo</h3>
+                    <div id="prz-resumo">Preencha os dados e calcule.</div>
+                </div>
+            </div>
+            <div class="card chart-container">
+                <h3>Projeção de Tempo</h3>
+                <canvas id="prz-chart" width="800" height="400"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Projeto A3 - Matemática Computacional Aplicada</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>

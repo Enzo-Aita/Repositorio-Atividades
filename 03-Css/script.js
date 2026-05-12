@@ -378,7 +378,7 @@ function donaBet() {
     // SAIDAS
     resposta.innerHTML = "Lucro final da Dona Bete: R$" + lucroFinal
 }
-function desafio46() {
+function desafio01() {
     // INFO
     let distancia
     let velocidade = 300000
@@ -415,4 +415,8 @@ function desafio46() {
 
     }
     document.getElementById("resultado").innerHTML = mensagem
+}
+function desafio02(){
+    
+
 }
