@@ -414,9 +414,160 @@ function desafio01() {
 
 
     }
-    document.getElementById("resultado").innerHTML = mensagem
+    resposta.innerHTML = mensagem
 }
 function desafio02(){
-    
+}
+function ernanuco(){
+    // infos
+let custosMensais
+let doacoes
+let valorFinal
+
+// leitura
+custosMensais = Number(prompt("Custos Mensais R$: "))
+doacoes = Number(prompt("Doeações Recebidas R$: "))
+
+// processos
+valorFinal = custosMensais - doacoes
+
+// saida
+resposta.innerHTML = ("Falta Pagar R$: " + valorFinal)
+}
+function capitaoGanso(){
+    // infos
+let gastos
+let faturamentoIngressos
+let faturamentoItens
+let faturamentoTotal
+let lucroReais
+let lucroPorcentagem
+
+// leitura
+gastos = Number(prompt("Valor Investido: R$ "))
+faturamentoIngressos = Number(prompt("Faturamento com Ingressos: R$"))
+faturamentoItens = Number(prompt("Faturamento com Itens: R$"))
+// processos
+faturamentoTotal = faturamentoIngressos + faturamentoItens
+lucroReais = faturamentoTotal - gastos
+lucroPorcentagem =  lucroReais / gastos
+// saida
+resposta.innerHTML = ("Lucro final : "  + lucroReais)
+resposta.innerHTML = ("Lucro em porcentagem %: " + lucroPorcentagem)
+}
+function Junin(){
+    // infos
+let salario
+let dias
+let salarioDiario
+
+// entradas
+salario = Number(prompt("Salário: "))
+dias = Number(prompt("Dias Trabalhados: "))
+
+// processo
+salarioDiario = salario / dias
+// saidas
+resposta.innerHTML = ("Salário diário: R$ " + salarioDiario.toFixed(2))
 
 }
+function monika(){
+// infos
+let n 
+let chance
+// leitura
+n = Number(prompt("Numero de olhadinhas no celuluar: "))
+// processo
+chance = (0.1 / (1 + 500 * n)) * 100
+// saidas
+resposta.innerHTML = ("Chance de aprovação basiada nos olhadinha no celular:  " + chance.toFixed(4))
+}
+function pepequeno(){
+    // infos
+let n 
+let chance
+// leitura
+n = Number(prompt("Numero de olhadinhas no celuluar: "))
+// processo
+chance = (0.1 / (1 + 500 * n)) * 100
+// saidas
+resposta.innerHTML = ("Chance de aprovação basiada nos olhadinha no celular:  " + chance.toFixed(4))
+}
+function tallesTransportadora(){
+// infos
+let pesoBruto
+let tara
+let pesoCarga
+// leitura
+pesoBruto = Number(prompt("Peso Bruto da Carga: kg"))
+tara = Number(prompt("Tara da Carga: "))
+// processo
+pesoCarga = pesoBruto - tara 
+// saidas
+resposta.innerHTML = ("Peso Final da Carga: Kg " + pesoCarga)
+}
+function surumoShow(){
+ // infos
+let shows
+let precoUnitario 
+let bombas =7
+let custoTotal
+let totalBombas
+
+// leitura
+shows = Number(prompt("Quantidade de shows: "))
+precoUnitario = Number(prompt("Digite o preço das bombas"))
+// processo
+totalBombas = shows * bombas
+custoTotal = bombas * precoUnitario
+// saida
+resposta.innerHTML = "<p>" + "Total de bombas que precisa comprar: " +  totalBombas + "</p>" +  " Custo total do shows: " + custoTotal
+
+}
+function tallesTransportadora02(){
+// infos
+let frete
+let peso
+let distancia
+let volume
+// leitura
+peso = Number(prompt("Peso carga: Kg "))
+distancia = Number(prompt("Distância percorrida: Km"))
+volume = Number(prompt("Volume da carga em m3: "))
+// processo
+frete = 15 + (2 * peso) + (0.05 * distancia ) + (10 * volume)
+// saidas
+resposta.innerHTML =("Frete total: R$ " + frete   )
+
+}
+function projetoPomar(){
+// infos
+let quantidadeInicial
+let quantidadeFinal
+let valorFinal
+
+// leitura
+quantidadeInicial = Number(prompt("Quantidade Inicial de Laranjas:"))
+quantidadeFinal = Number(prompt("Quantiade Final de Laranjas: "))
+// processo
+valorFinal = quantidadeInicial - quantidadeFinal
+
+// saidas
+resposta.innerHTML =("Valor restante de laranjas: " + valorFinal)
+}
+function guilhermePortoes(){
+// infos
+let clt
+let estagiarios
+let pj
+let totalDeDevs
+// leitura
+clt = Number(prompt("Número de Clts"))
+estagiarios = Number(prompt("Número de Estgiários"))
+pj = Number(prompt("Número de pjs"))
+// processo
+totalDeDevs = clt + estagiarios + pj
+// saida
+resposta.innerHTML =("Total de Devs: " + totalDeDevs)
+}
+
