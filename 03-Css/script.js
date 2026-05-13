@@ -570,4 +570,35 @@ totalDeDevs = clt + estagiarios + pj
 // saida
 resposta.innerHTML =("Total de Devs: " + totalDeDevs)
 }
+function manoJuco(){
+    // infos
+    let moradia
+    let agua
+    let luz
+    let internet
+    let gasolina
+    let telefone
+    let outros
+    let streamings
+    let salario
+    // entrada
+    salario = Number(prompt("Digite o salario do Juca: "))
+    moradia = Number(prompt(" Valor gasto em "))
+    agua = Number(prompt(" Valor gasto em "))
+    luz = Number(prompt(" Valor gasto em "))
+    internet = Number(prompt(" Valor gasto em "))
+    gasolina = Number(prompt(" Valor gasto em "))
+    telefone = Number(prompt(" Valor gasto em "))
+    outros = Number(prompt(" Valor gasto em "))
+    moradia = Number(prompt(" Valor gasto em "))
+    moradia = Number(prompt(" Valor gasto em "))
+
+
+
+
+
+
+    // processamento
+    // saida
+}
 
