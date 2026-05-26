@@ -1,4 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: rgba(33, 2, 48, 0.658);
 }
+
     
+
+span{
+    background-color: #834444;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5xp;
+}
+#historico{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

@@ -1,97 +1,8 @@
-let contD4 = 0
-let contD6 = 0
-let contD10 = 0
-let contD12 = 0
-let contD20 = 0
-
-function rolarDado(lados) {
-
-    let resultado = Math.floor(Math.random() * lados) + 1
-
-    total = total + resultado
-
-    document.getElementById("total").innerHTML = total
-
-    document.getElementById("resultado").innerHTML =
-        "D" + lados + " tirou " + resultado
-
-    document.getElementById("historico").innerHTML +=
-        "D" + lados + ": " + resultado + "<br>"
-
-
-
-    // CONTADORES
-
-    if (lados == 4) {
-
-        contD4++
-        document.getElementById("contD4").innerHTML = contD4
-
-    }
-
-    else if (lados == 6) {
-
-        contD6++
-        document.getElementById("contD6").innerHTML = contD6
-
-    }
-
-    else if (lados == 10) {
-
-        contD10++
-        document.getElementById("contD10").innerHTML = contD10
-
-    }
-
-    else if (lados == 12) {
-
-        contD12++
-        document.getElementById("contD12").innerHTML = contD12
-
-    }
-
-    else if (lados == 20) {
-
-        contD20++
-        document.getElementById("contD20").innerHTML = contD20
-
-    }
-
-}
-function resetar() {
-
-    total = 0
-
-    contD4 = 0
-    contD6 = 0
-    contD10 = 0
-    contD12 = 0
-    contD20 = 0
-
-
-    document.getElementById("total").innerHTML = 0
-
-    document.getElementById("resultado").innerHTML = "-"
-
-    document.getElementById("historico").innerHTML = ""
-
-    document.getElementById("contD4").innerHTML = 0
-    document.getElementById("contD6").innerHTML = 0
-    document.getElementById("contD10").innerHTML = 0
-    document.getElementById("contD12").innerHTML = 0
-    document.getElementById("contD20").innerHTML = 0
-
-}
-
-
-
-
 let totalRecebido = 0
 let totalRepasse = 0
 let faturamentoSandro = 0
 let totalSeguradoras = 0
 let quantidadeClientes = 0
-
 
 function registrarServico(){
 
@@ -189,7 +100,7 @@ function registrarServico(){
 
         // HISTÓRICO
 
-        document.getElementById("historico").innerHTML +=
+        document.getElementById("historicoCaixa").innerHTML +=
         "Cliente " + quantidadeClientes +
         " | Valor final: R$" + valorFinal.toFixed(2) +
         " | Repasse: R$" + repasse.toFixed(2) +
@@ -213,16 +124,22 @@ function registrarServico(){
 
 
 
+let totalRolado = 0
 
-
-
-
-
-
-
-
-
-
+function rolarDado(numero){
+    // console.log(numero);
+    let dado = Math.ceil(Math.random()*numero)
+    document.getElementById('outputUltima').innerHTML = dado
+    document.getElementById("historicoDado").innerHTML += "<span>d" + numero + ":" + dado + "<span>"
+    totalRolado += dado
+    document.getElementById('outputTotal').innerHTML = totalRolado
+}
+function resetar() {
+    totalRolado = 0
+    document.getElementById('outputUltima').innerHTML = 'Não jogou ainda'
+    document.getElementById('outputTotal').innerHTML = 0
+    document.getElementById()
+}
 
 let total = 0
 function registrarVenda() {
