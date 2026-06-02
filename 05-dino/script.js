@@ -1,58 +1,71 @@
-let dinoSorteado = ""
-let escolherDino = ""
-let
+let dinoEscolhido = ''
+let dinoSorteado = ''
+let total = 0
 
-function testar() {
-    let n = parseInt(Math.random() * 10)
-    console.log(n)
+function testar(){
 
-    dinoSorteado = convertarParaDino(n)
+    let n = parseInt(Math.random()*10)
     console.log(n);
 
-
-}
-
-function escolherDino() {
-    escolherDino = n
-    dinoSorteado = parseInt(Math.random() * 10)
-    console.log(escolherDino);
-    console.log(escolherDino);
-
-    if(escolherDino == dinoSorteado){
-        alert("!ganhou!!")
-    }
-
-    document.getElementById("outDinoEscolhido").innerHTML = convertarParaDino(dinoSorteado)
-        document.getElementById("outDinoEscolhido").innerHTML = convertarParaDino(escolherDino)
-
+    dinoSorteado = converterParaDinossauro(n)
+    console.log(dinoSorteado);
+    
     
 }
 
-function convertarParaDino(n) {
-    let dino = ""
+function escolherDino(n){
+    let aposta = Number(document.getElementById('inputAposta').value)
+    total += aposta
 
-    if (n == 0) {
-        dino = "Espinossauro"
-    } else if (dino == 1) {
-        dino = "T-Rex"
-    } else if (dino == 2) {
-        dino = "Braquiossauro"
-    } else if (dino == 3) {
-        dino = "Velocirraptor"
-    } else if (dino == 4) {
-        dino = "Estegossauro"
-    } else if (dino == 5) {
-        dino = "Triceratopo"
-    } else if (dino == 6) {
-        dino = "Anquilossauro"
-    } else if (dino == 7) {
-        dino = "Parassauro"
-    } else if (dino == 8) {
-        dino = "Alossauro"
-    } else if (dino == 9) {
-        dino = "Carnotauro"
+    console.log(aposta);
+    console.log(total);
+    
+
+    dinoEscolhido = n
+    dinoSorteado = parseInt(Math.random()*10)
+
+    if(dinoEscolhido == dinoSorteado){
+        alert('Ganhou!!')
     }
 
-    console.log(dino)
+    document.getElementById('outDinoEscolhido').innerHTML = converterParaDinossauro(dinoEscolhido)
+    document.getElementById('outDinoSorteado').innerHTML = converterParaDinossauro(dinoSorteado)
 
+
+    console.log(dinoEscolhido);
+    console.log(dinoSorteado);
+
+    console.log(converterParaDinossauro(dinoEscolhido));
+    console.log(converterParaDinossauro(dinoSorteado));
+    
+    
+}
+
+function converterParaDinossauro(n){
+    let dino = ''
+    if(n == 0){
+        dino = 'Espinossauro'
+    }else if(n == 1){
+        dino = 'T-Rex'
+    }else if(n == 2){
+        dino = 'Braquiossauro'
+    }else if(n == 3){
+        dino = 'Velocirraptor'
+    }else if(n == 4){
+        dino = 'Estegossauro'
+    }else if(n == 5){
+        dino = 'Tricerátopo'
+    }else if(n == 6){
+        dino = 'Anquilossauro'
+    }else if(n == 7){
+        dino = 'Parassaurolofo'
+    }else if(n == 8){
+        dino = 'Alossauro'
+    }else if(n == 9){
+        dino = 'Carnotauro'
+    }
+
+    return dino
+    // console.log(dino);
+    
 }
