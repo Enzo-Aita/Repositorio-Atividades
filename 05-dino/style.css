@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(1, 26, 1);
+}
+h1{
+    color: rgb(84, 129, 212);
+    margin: 10px;
+}
+h2{
+    color: rgb(18, 71, 5);
+    text-align: center;
+    background-color: rgb(1, 26, 1);
+}
+label{
+    color: rgb(18, 71, 5);
+    margin: 15px;
+
+
+}
+button{
+    background-color: black;
+    color: rgb(252, 245, 245);
+    border-radius: 5px;
+    padding: 5px;
+    width: 25%;
+}
+#btFinanca{
+    width: 40px;
+}
+p{
+    color: rgb(18, 71, 5);
+    padding: 15px;
+}
+input{
+    height: 20px;
+    border-radius: 10px;
+}
+#divBt{
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    
+}
