@@ -89,8 +89,6 @@ function calcularFinanciamento() {
         tbody.innerHTML += row;
     });
 
-    // Desenhar Gráfico
-    drawChart('fin-chart', parcelas.map(p => p.num), parcelas.map(p => p.saldo), 'Saldo Devedor');
 }
 
 // --- Lógica de Juros Compostos ---
@@ -139,8 +137,7 @@ function calcularJuros() {
         tbody.innerHTML += row;
     });
 
-    // Desenhar Gráfico
-    drawChart('jur-chart', dados.map(d => d.mes), dados.map(d => d.saldo), 'Evolução do Patrimônio');
+
 }
 
 // --- Lógica de Prazo de Investimento ---

@@ -1,11 +1,24 @@
+<!--
+    Calculadora Financeira A3
+    Projeto acadêmico de Matemática Computacional Aplicada.
+
+    Estrutura:
+    - Financiamento de Veículos (PRICE/SAC)
+    - Juros Compostos
+    - Prazo de Investimento
+
+    Responsável pela estrutura visual da aplicação.
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Financeira A3 - MCA</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -51,10 +64,6 @@
                     <h3>Resumo</h3>
                     <div id="fin-resumo">Preencha os dados e calcule.</div>
                 </div>
-            </div>
-            <div class="card chart-container">
-                <h3>Gráfico de Evolução</h3>
-                <canvas id="fin-chart" width="800" height="400"></canvas>
             </div>
             <div class="card table-container">
                 <h3>Tabela Analítica</h3>
@@ -103,10 +112,6 @@
                     <div id="jur-resumo">Preencha os dados e calcule.</div>
                 </div>
             </div>
-            <div class="card chart-container">
-                <h3>Gráfico de Crescimento</h3>
-                <canvas id="jur-chart" width="800" height="400"></canvas>
-            </div>
             <div class="card table-container">
                 <h3>Tabela Analítica</h3>
                 <div class="scroll-table">
@@ -154,10 +159,6 @@
                     <div id="prz-resumo">Preencha os dados e calcule.</div>
                 </div>
             </div>
-            <div class="card chart-container">
-                <h3>Projeção de Tempo</h3>
-                <canvas id="prz-chart" width="800" height="400"></canvas>
-            </div>
         </section>
     </main>
 
@@ -169,4 +170,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
