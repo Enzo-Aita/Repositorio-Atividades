@@ -29,20 +29,29 @@
 
 
 
+//Imprima a tabuada do 5.
+function tabuada5() {
+  let i = 0
+  while (i < 10) {
+    i++
+    let tabuada = i * 5
+    console.log(tabuada)
+  }
+}
 
+//Imprima a qualquer tabuada.
+function tabuada() {
+  let i = 1
+  let tabaudaaleatoria = prompt("Digite um número")
 
-
-
-
-
-
-
-
-
-
+  while (i < 11) {
+    let tabuada = i * tabaudaaleatoria
+    console.log(tabuada)
+    i++
+  }
+}
 
 //Faça um programa que calcule o quadrado de cada número de 1 a 10.
-
 function quadradoNumero() {
   let i = 0
   while (i < 10) {
@@ -50,7 +59,6 @@ function quadradoNumero() {
     let quadrado = i * i
     console.log(i + ": " + quadrado)
   }
-
 }
 
 //🐱‍🏍Calcule a soma dos números de 1 a 100.
@@ -62,22 +70,17 @@ function somaNumeros() {
     let somaantigo = soma
     soma = soma + i
     console.log(somaantigo + " + " + i + " = " + soma)
-
   }
 }
+//🐱‍🏍Mostre os números ímpares de 1 a 20.
 function numerosimpares1a20() {
   let i = 1
   while (i < 20) {
     console.log(i)
     i += 2
-
-
-
   }
-
-
 }
-
+//🐱‍🏍Imprima os números de 10 a 1 em ordem decrescente.
 function numerosDecrescente() {
   let i = 10
   while (i >= 1) {
@@ -85,6 +88,53 @@ function numerosDecrescente() {
     i--
   }
 }
+////🐱‍🏍Imprima os números de 10 a 1 em ordem crescente.
+function numerosCrescentes() {
+  let i = 1
+  while (i <= 10) {
+    console.log(i)
+    i++
+  }
+}
+//Calcule o fatorial de um número dado.
+function fatorial() {
+
+  let numero = prompt("Digite um Número")
+  let fatorial = 1
+  let i = 1
+
+  while (i <= numero) {
+    fatorial = fatorial * i
+    i++
+    console.log(fatorial);
+  }
+}
+
+//🐱‍🏍Imprima os números de 1 a 100, 
+// substituindo os múltiplos de 3 por "Fizz", 
+// os múltiplos de 5 por "Buzz" e os múltiplos de ambos por "FizzBuzz".
+function FizzBuzz() {
+  let i = 0
+  while (i < 100) {
+    i++
+    if (i % 3 == 0 && i % 5 == 0) {
+      console.log("FizzBuzz")
+    } else if (i % 3 == 0) {
+      console.log("Fizz")
+    } else if (i % 5 == 0) {
+      console.log("Buzz");
+      
+    } else {
+      console.log(i);
+      
+    }
+  
+
+  }
+
+}
+
+
 
 
 
