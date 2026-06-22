@@ -123,16 +123,49 @@ function FizzBuzz() {
       console.log("Fizz")
     } else if (i % 5 == 0) {
       console.log("Buzz");
-      
+
     } else {
       console.log(i);
-      
-    }
-  
 
+    }
+  }
+}
+
+//Faça um programa que calcule o valor da série: 1 + 1/2 + 1/3 + ... + 1/10.
+function serie() {
+  let i = 1
+  soma = 0
+  while (i <= 10) {
+    soma += 1 / i
+    i++
+    console.log(soma.toFixed(2));
   }
 
 }
+//Conte quantos números pares e ímpares existem de 1 até <um número fornecido pelo usuário>.
+function numerosPareseImpares() {
+  let i = 1
+  let numero = prompt("Digite um número")
+  let pares = 0
+  let impares = 0
+
+  while (i <= numero) {
+    if (i % 2 == 0) {
+      pares++
+    } else {
+      impares++
+    }
+    i++
+    console.log(numero + " quantidade de " + pares + " quantidade de " + impares);
+  }
+}
+//Dada uma lista de números, encontre o maior e o menor valor.
+function maiormenor(){
+  let i = 0
+  
+}
+
+
 
 
 
