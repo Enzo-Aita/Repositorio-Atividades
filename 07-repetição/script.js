@@ -160,90 +160,10 @@ function numerosPareseImpares() {
   }
 }
 //Dada uma lista de números, encontre o maior e o menor valor.
-function maiormenor(){
+function maiormenor() {
   let i = 0
-  
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -269,3 +189,204 @@ function numerosPrimos() {
     numero++;
   }
 }
+
+// usando Repetição For
+
+
+// 1. Utilize um for para calcular a soma dos números de 1 até 10 e exiba o resultado. 
+
+function soma() {
+  let resultado = 0
+  for (let i = 0; i <= 10; i++) {
+    resultado = resultado + i
+    console.log(resultado);
+  }
+}
+//2. Crie um programa que mostre a tabuada do número 5, de 5 × 1 até 5 × 10,utilizando um for
+function tabuada() {
+  for (let i = 0; i < 10; i++) {
+    let tabuada = i * 5
+
+    console.log(tabuada);
+  }
+}
+//3. Utilize um for para mostrar o quadrado dos números de 1 até 10.
+function quadradoDoNumero() {
+  for (let i = 0; i <= 10; i++) {
+    let quadrado = i * i
+    console.log(quadrado)
+  }
+}
+//4. Considere a palavra “JavaScript”. Utilize um for para exibir cada letra da palavra em uma linha diferente.
+
+function javaScript() {
+  let palavra = "javaScript"
+  for (let i = 0; i <= 10; i++) {
+    console.log(palavra[i])
+  }
+
+}
+//5. Utilize um for para mostrar todos os múltiplos de 3 entre 1 e 30.
+
+function multiplosDe3() {
+
+  for (let i = 0; i <= 30; i++) {
+
+    if (i % 3 == 0) {
+      console.log("multiplos de 3 = " + " " + i)
+    }
+  }
+}
+
+//6. Utilize um for para imprimir 10 asteriscos, um de cada vez, na mesma linha.
+function asteriscos() {
+  let texto = ""
+  for (let i = 0; i <= 10; i++) {
+    texto += "*"
+    
+  }
+  console.log(texto)
+  
+}
+//7. Utilize um for para calcular a soma dos números pares entre 1 e 20.
+
+function numerosPares() {
+  let pares = 0
+  for (let i = 0; i <= 20; i++) {
+    if (i % 2 == 0) {
+      pares = pares + i
+      console.log(pares)
+    }
+  }
+}
+//8. Utilize um for para mostrar os números de 0 até 50, contando de 5 em 5.
+
+function numerosDe5em5() {
+  for (let i = 0; i <= 50; i++) {
+    if (i % 5 == 0) {
+      console.log(i)
+    }
+  }
+}
+//9. Utilize um for para imprimir a palavra "Olá!" exatamente 8 vezes.
+function ola() {
+  for (let i = 0; i < 8; i++) {
+    let palavra = "Olá!" + i
+
+    console.log(palavra)
+
+  }
+
+}
+//10. Calcule a soma de todos os números ímpares entre 1 e 15 utilizando um for.
+function numerosImpares() {
+  let impares = 0
+  let soma = 0
+  for (let i = 0; i <= 15; i++) {
+    impares = i += 1
+    soma = soma + impares
+    console.log(soma)
+  }
+}
+//11. Utilize um for para exibir a sequência: 1, 12, 123, 1234, 12345
+function sequencia() {
+
+  for (let i = 0; i <= 0; i++) {
+    console.log(i)
+  }
+
+}
+//12 . Utilize um for para calcular o fatorial de 5.
+function fatorialDe5(){
+  let fatorial = 1
+  for(let i = 1; i <= 5; i++){
+    fatorial = fatorial * i
+
+    console.log(fatorial)
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
