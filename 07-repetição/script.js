@@ -190,6 +190,8 @@ function numerosPrimos() {
   }
 }
 
+
+
 // usando Repetição For
 
 
@@ -246,8 +248,9 @@ function asteriscos() {
     
   }
   console.log(texto)
-  
+
 }
+
 //7. Utilize um for para calcular a soma dos números pares entre 1 e 20.
 
 function numerosPares() {
@@ -290,21 +293,38 @@ function numerosImpares() {
 }
 //11. Utilize um for para exibir a sequência: 1, 12, 123, 1234, 12345
 function sequencia() {
+  let sequencia = ""
 
-  for (let i = 0; i <= 0; i++) {
-    console.log(i)
+  for (let i = 1; i <= 5; i++) {
+    sequencia = sequencia + i
+    console.log(sequencia)
   }
 
 }
 //12 . Utilize um for para calcular o fatorial de 5.
-function fatorialDe5(){
+function fatorialDe5() {
   let fatorial = 1
-  for(let i = 1; i <= 5; i++){
+  for (let i = 1; i <= 5; i++) {
     fatorial = fatorial * i
 
     console.log(fatorial)
   }
 }
+//13. Utilize um for para contar quantas letras "o" existem em uma palavra qualquer
+function palavraqualquer() {
+  const palavra = prompt("Digite uma palavra");
+
+  let contador = 0;
+
+  for (let i = 0; i < palavra.length; i++) {
+    if (palavra[i].toLowerCase() == 'o') {
+      contador++
+    }
+  }
+
+  console.log("A palavra " + palavra + " tem " + contador + " letras " + "o");
+}
+
 
 
 
