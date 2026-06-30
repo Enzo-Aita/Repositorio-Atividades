@@ -76,9 +76,7 @@ function sortearProdutos() {
         "Lâmpada Inteligente", "Fechadura Digital", "Protetor Solar FPS 50", "Garrafa Térmica", "Livro Best-Seller",
         "Jogo de Panelas", "Almofada Ortopédica", "Tapete de Yoga", "Bicicleta Aro 29", "Skate Complete"
     ]
-    let n = Math.ceil(Math.random())
-    let produtoSorteado = produtos[n];
-
-    console.log(produtoSorteado)
+    //  Math.ceil(Math.random() * produtos.length)
+    console.log(produtos[Math.ceil(Math.random() * produtos.length)])
 }
 
