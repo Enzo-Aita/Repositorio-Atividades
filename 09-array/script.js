@@ -4,6 +4,8 @@ let precos = [8, 15, 12, 6]
 let dias = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
 let numerosPares = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 let frutas = ['banana', 'maçã', 'uva']
+let amigos = ['Alice', 'Bob', 'Charlie', 'Dave', 'Eva', 'Frank']
+let idades = [25, 30, 28, 22, 26, 24]
 
 
 function verProdutos() {
@@ -57,26 +59,27 @@ function removerultimoProduto() {
 }
 
 function diasdasemana() {
+    document.getElementById("Resultado").innerHTML = " "
 
     for (let i = 0; i < dias.length; i++) {
-
         document.getElementById("Resultado").innerHTML += "<p>" + dias[i] + "</p>"
-
-
     }
-
 }
 
 function adicionarFeriado() {
     let feriado
     feriado = "Feriado"
+    document.getElementById("Resultado").innerHTML = " "
 
     dias.push(feriado)
+
+
     diasdasemana()
 }
 function removerUltimoDia() {
     dias.pop()
     diasdasemana()
+
 
 }
 
@@ -113,4 +116,70 @@ function adicionarMorango() {
     listadeFrutas()
 }
 
+function removerSegundoElemento() {
+    frutas.splice(1, 1)
+
+    listadeFrutas()
+}
+
+
+function listaAmigos() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < amigos.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + amigos[i] + "</p>"
+    }
+
+}
+function adicionarAmigos() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    let amigos2 = ['leo', 'joao', 'kauan']
+
+    let todosJuntos = amigos.concat(amigos2)
+
+    for (let i = 0; i < todosJuntos.length; i++) {
+
+        document.getElementById("Resultado").innerHTML += "<p>" + todosJuntos[i] + "</p>"
+
+    }
+
+
+    // document.getElementById("Resultado").innerHTML = " "
+
+    document.getElementById("Resultado").innerHTML += "<p>" + amigos2 + "</p>"
+
+
+}
+
+function idadesDosAmigos() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < idades.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + idades[i] + "</p>"
+    }
+}
+function somaIdades() {
+    let soma = idades[0] + idades[1]
+
+    idadesDosAmigos()
+    document.getElementById("Resultado").innerHTML += "<p>" + "Idade do primero e do segundo somados " + "= " + soma + "</p>"
+
+
+
+}
+function mediaIdades() {
+
+    let soma = idades.reduce((accumulator, idades) => accumulator + idades, 0)
+
+    console.log(soma)
+
+    let media = soma / idades.length
+    console.log(media)
+
+}
 
