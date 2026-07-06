@@ -9,7 +9,7 @@ let idades = [25, 30, 28, 22, 26, 24]
 let compras = ['Maçãs', 'Pão', 'Leite']
 let numerosImpares = []
 let numeros = [3, 6, 9]
-let cidades = ['Paris', 'Londres', 'Nova York']
+let cidades = ['Paris', 'Londres', 'Nova York', 'Miami']
 
 
 function verProdutos() {
@@ -228,19 +228,31 @@ function listaDenumerosImpares() {
 }
 function adicinarNumerosImpares() {
 
-    for (let i = 1;  numerosImpares.length < 5; i += 2) {
+    for (let i = 1; numerosImpares.length < 5; i += 2) {
         numerosImpares.push(i)
 
     }
-    console.log(numerosImpares)
+    document.getElementById("Resultado").innerHTML += "<p>" + numerosImpares + "</p>"
+
 }
 
-function multilicador() {
+function multiplicador() {
 
-    let multiplicador = numeros.map((x) => x * 2)
+    let multiplo = numeros.map((x) => x * 2)
 
-    console.log(multiplicador)
+    document.getElementById("Resultado").innerHTML += "<p>" + multiplo + "</p>"
+
 }
-function cidades(){
-    
+
+function fraseComCidades() {
+
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < cidades.length; i++) {
+
+        document.getElementById("Resultado").innerHTML += "<p>" + "Eu adoraria visitar " + cidades[i] + " e " + cidades[i] + "</p>"
+
+    }
+
 }
+
