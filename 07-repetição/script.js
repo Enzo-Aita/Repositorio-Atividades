@@ -345,11 +345,29 @@ function palavraqualquer() {
 
 
 
+function garcom(){
 
 
 
+let salario = Number(prompt("Digite seu salario"))
+let valorEmprestimo = 5000
+let numPrestacoes = 10
 
+if (salario <= 0 || valorEmprestimo <= 0 || numPrestacoes <= 0) {
+    console.log("Erro: Todos os valores informados devem ser maiores que zero.")
+} else {
+    let valorPrestacao = valorEmprestimo / numPrestacoes
+    let limiteMaximo = salario * 0.30
 
+    if (valorPrestacao <= limiteMaximo) {
+        console.log("Empréstimo CONCEDIDO.");
+        console.log("Valor da prestação: R$ " + valorPrestacao.toFixed(2))
+    } else {
+        console.log("Empréstimo RECUSADO.");
+        console.log("O valor da prestação (R$ " + valorPrestacao.toFixed(2) + ") ultrapassa o limite de 30% do salário (R$ " + limiteMaximo.toFixed(2) + ").")
+    }
+}
+}
 
 
 
