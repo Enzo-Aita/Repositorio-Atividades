@@ -71,11 +71,10 @@ function diasdasemana() {
 }
 
 function adicionarFeriado() {
-    let feriado
-    feriado = "Feriado"
+
     document.getElementById("Resultado").innerHTML = " "
 
-    dias.push(feriado)
+    dias.push("feriado")
 
 
     diasdasemana()
