@@ -2,7 +2,14 @@ let personagem = ["Lúcio Fernando", "Mônica", "Capitão Ganso"]
 let personagem2 = ["Lúcio Fernando", "Mônica", "Capitão Ganso", "Gill Bates"]
 let personagem3 = ["Peba", "Bilu", "Waldisney"]
 let personagem4 = ["Tião", "Junin", "Padre Ernan Buco"]
-let personagem5 =["Rivaldo Jesus","Kowalski","GENéZio","Waldisney"]
+let personagem5 = ["Rivaldo Jesus", "Kowalski", "GENéZio", "Waldisney"]
+let personagem6 = ["Bilu", "Mônica", "Gill Bates", "Junin", "Peba"]
+let personagem7 = ["Capitão Ganso", "Heitor Tuga", "Dona Bete"]
+let personagem8 = ["Padre Ernan Buco", "GENéZio", "Bilu", "Junin"]
+let personagem9 = ["Lúcio Fernando", "Rivaldo Jesus", "Mônica", "Capitão Ganso", "Gill Bates", "Junin"]
+let personagem10 = ["Tião", "Peba", "Waldisney"];
+let personagem11 = ["Gill Bates", "Kowalski", "GENéZio", "Padre Ernan Buco", "Heitor Tuga"];
+
 
 function listaPersonagens1() {
     document.getElementById("Resultado").innerHTML = " "
@@ -97,19 +104,19 @@ function listaPersonagens4() {
     }
 }
 
-function exercicio12(){
-    personagem4.splice(1,1)
+function exercicio12() {
+    personagem4.splice(1, 1)
     listaPersonagens4()
 }
 
-function exercicio14(){
+function exercicio14() {
     personagem4.push("Dona Bete")
     personagem4.unshift("Mônica")
     listaPersonagens4()
 
 }
-function listaPersonagens5(){
- document.getElementById("Resultado").innerHTML = " "
+function listaPersonagens5() {
+    document.getElementById("Resultado").innerHTML = " "
 
     for (let i = 0; i < personagem5.length; i++) {
 
@@ -117,14 +124,127 @@ function listaPersonagens5(){
         document.getElementById("Resultado").innerHTML += "<p>" + personagem5[i] + "</p>"
     }
 }
-function exercicio14(){
+function exercicio14() {
     personagem5.pop()
     personagem5.shift()
     listaPersonagens5()
 }
-function exercicio15(){
+function exercicio15() {
     let indice = personagem5.indexOf("GENéZio")
     console.log(indice)
 }
+function exercicio16() {
+    let inclui = personagem5.includes("Capitão Ganso")
+    console.log(inclui)
+}
+function listaPersonagens6() {
+    document.getElementById("Resultado").innerHTML = " "
 
+    for (let i = 0; i < personagem6.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + personagem6[i] + "</p>"
+    }
+}
+function exercicio17() {
+    personagem6.splice(0, 2)
+    listaPersonagens6()
+}
+function exercicio18() {
+    personagem6.splice(2, 3)
+    listaPersonagens6()
+}
+function listaPersonagens7() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < personagem7.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + personagem7[i] + "</p>"
+    }
+}
+function exercicio19() {
+    personagem7.push("Gill Bates")
+    personagem7.unshift("Lúcio Fernando")
+    listaPersonagens7()
+}
+function exercicioextra2() {
+    personagem7.splice(0, 1)
+    listaPersonagens7()
+}
+function exercicio20() {
+    personagem7.reverse()
+    listaPersonagens7()
+}
+function listaPersonagens8() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < personagem8.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + personagem8[i] + "</p>"
+    }
+}
+function exercicio21() {
+    let inclui = personagem8.includes("Bilu")
+    console.log(inclui);
+    listaPersonagens8()
+}
+function exercicio22() {
+    let indece = personagem8.indexOf("Padre Ernan Buco")
+    console.log(indece)
+    listaPersonagens8()
+}
+function listaPersonagens9() {
+
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < personagem9.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + personagem9[i] + "</p>"
+    }
+}
+function exercicio23() {
+    personagem9.splice(2, 2)
+    listaPersonagens9()
+}
+function listaPersonagens10() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < personagem10.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + personagem10[i] + "</p>"
+    }
+}
+function exercicio24() {
+    personagem10.push("Bilu")
+    personagem10.unshift("Dona Bete")
+    personagem10.pop()
+    personagem10.reverse()
+    listaPersonagens10()
+}
+function listaPersonagens11() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < personagem11.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + personagem11[i] + "</p>"
+    }
+}
+function exercicio25() {
+    let inclui = personagem8.includes("Kowalski")
+    console.log(inclui);
+
+     let indece = personagem11.indexOf("Padre Ernan Buco")
+    console.log(indece);
+
+    personagem11.splice(2, 1)
+
+    personagem11.reverse()
+
+    listaPersonagens11()
+}
 
