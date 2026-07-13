@@ -549,3 +549,19 @@ function exercicio42(){
     pessoas7.reverse()
     listaPessoas7()
 }
+function listaEmpresas9(){
+ document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < empresas9.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + empresas9[i] + "</p>"
+    }
+}
+function exercicio43(){
+    empresas9.push("Pamdiló Bolos")
+        listaEmpresas9()
+
+    let indece = empresas9.indexOf("Pizza Ruth")
+    console.log(indece)
+}
