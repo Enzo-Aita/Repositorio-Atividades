@@ -12,6 +12,7 @@ let numeros = [3, 6, 9]
 let cidades = ['Paris', 'Londres', 'Nova York', 'Miami']
 
 
+
 function verProdutos() {
     // console.log(produtos);
     for (let i = 0; i < produtos.length; i++) {
@@ -27,7 +28,6 @@ function verProdutoscomPrecos() {
             " R$ " + precos[i].toFixed(2).replace(".", ",") + "</p>"
     }
 }
-
 function aumentodePrecos() {
 
     for (let i = 0; i < precos.length; i++) {
@@ -61,7 +61,6 @@ function removerultimoProduto() {
 
 
 }
-
 function diasdasemana() {
     document.getElementById("Resultado").innerHTML = " "
 
@@ -69,7 +68,6 @@ function diasdasemana() {
         document.getElementById("Resultado").innerHTML += "<p>" + dias[i] + "</p>"
     }
 }
-
 function adicionarFeriado() {
 
     document.getElementById("Resultado").innerHTML = " "
@@ -85,7 +83,6 @@ function removerUltimoDia() {
 
 
 }
-
 function listaNumerosPares() {
     document.getElementById("Resultado").innerHTML = " "
 
@@ -95,13 +92,11 @@ function listaNumerosPares() {
 
     }
 }
-
 function removerTerceiroNumero() {
     numerosPares.splice(2, 1, "12")
 
     listaNumerosPares()
 }
-
 function listadeFrutas() {
     document.getElementById("Resultado").innerHTML = " "
 
@@ -118,14 +113,11 @@ function adicionarMorango() {
 
     listadeFrutas()
 }
-
 function removerSegundoElemento() {
     frutas.splice(1, 1)
 
     listadeFrutas()
 }
-
-
 function listaAmigos() {
     document.getElementById("Resultado").innerHTML = " "
 
@@ -157,7 +149,6 @@ function adicionarAmigos() {
 
 
 }
-
 function idadesDosAmigos() {
     document.getElementById("Resultado").innerHTML = " "
 
@@ -186,7 +177,6 @@ function mediaIdades() {
     console.log(media)
 
 }
-
 function listaDeCompras() {
 
     document.getElementById("Resultado").innerHTML = " "
@@ -207,7 +197,6 @@ function adicionarCompras() {
     listaDeCompras()
 
 }
-
 function removerTerceiraCompras() {
 
     compras.splice(2, 1)
@@ -221,7 +210,6 @@ function testarelemento() {
 
     listaDeCompras()
 }
-
 function listaDenumerosImpares() {
     console.log(numerosImpares)
 }
@@ -234,7 +222,6 @@ function adicinarNumerosImpares() {
     document.getElementById("Resultado").innerHTML += "<p>" + numerosImpares + "</p>"
 
 }
-
 function multiplicador() {
 
     let multiplo = numeros.map((x) => x * 2)
@@ -242,7 +229,6 @@ function multiplicador() {
     document.getElementById("Resultado").innerHTML += "<p>" + multiplo + "</p>"
 
 }
-
 function fraseComCidades() {
 
     document.getElementById("Resultado").innerHTML = " "
@@ -255,3 +241,16 @@ function fraseComCidades() {
 
 }
 
+let maximo = []
+let minimas = []
+
+function gerarTemperaturas(){
+
+  for(let i = 0; i < 30; i++){
+    let min = Math.floor(Math.random()*35)
+    minimas.push(min)
+    console.log(minimas);
+    
+  }
+
+}
