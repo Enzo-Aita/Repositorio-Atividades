@@ -262,15 +262,19 @@ let pessoas3 = ["Alan Grande", "Tio Paulo", "Dr Auzio", "GENéZio", "Mosta", "Gu
 let empresas5 = ["Pamdiló Bolos", "Moçambike", "Decorações de Coração", "Clínica Frida Calos", "Taubaté Tábuas", "Vidraçaria Douglass", "Gil Som", "Paty em Ação", "Mi Sungas", "Sombransheila", "Esthertica", "Pricílios", "Hanna Barbearia", "Realisa Alisamentos"];
 let pessoas4 = ["Dona Bete", "Kowalski", "Capitão Ganso", "Junin", "Bilu"];
 let empresas6 = ["Roda de Roque", "MilkSahakespeare", "Dasamassandro", "Tias Fofinhas", "Horrível Trio", "Pedro Chips", "Frutos e Fritas do Frota", "Taxi Aéreo Mamute Pequenino", "Adomicílios", "Abalada", "Ricárdio"]
-let pessoas5  = ["Heitor Tuga", "Frei Dimão", "Gael", "Sarumano", "Márcia", "Mônika", "Yasmina", "Lady Murphy", "Caio Pontes"]
-let empresas7 = ["A Bem Suada","Aspirantes Aspiradores","jamanjo.com.br","MA Canudos", "IA","Pé Pequeno","Trajeto Pomar","Vírus da Grife","Paralamas do Seu Celso","Samara Poços"]
-let pessoas6 = ["Lúcio Fernando","Ron Roni","Seu Bernardo","Luiza","Roque","Rita Aline","Dr Auzio"]
-let empresas8 =["Hotel Téo","Pousada Ada","Resort Orth","Albergue Berg","Camping Pim","Macrohard","Bergamota","Amazonia","Visionery","HD Cimentos","Meia Meia Meia","Coxão do Santinho"];
-let pessoas7 = ["Pe. Ernan Buco","Frei Dimão","Capitão Ganso","Junin","PeBa","Mano Juca","Bilu","Waldisney"];
-let empresas9 =  ["Casa de Pastel","Lanchonete Altas Horas","Tio do Pavê Sobremesas","Bolores Bolos e Flores","Pizza Ruth","Sanduíche-iche da Ruth","Cereal Killer Cereal Bar","Restaurante Contra-Filé","Rango Star","Acarajéssica","Templo de Salmão","Navegano","Alibebe"];
-
-
-
+let pessoas5 = ["Heitor Tuga", "Frei Dimão", "Gael", "Sarumano", "Márcia", "Mônika", "Yasmina", "Lady Murphy", "Caio Pontes"]
+let empresas7 = ["A Bem Suada", "Aspirantes Aspiradores", "jamanjo.com.br", "MA Canudos", "IA", "Pé Pequeno", "Trajeto Pomar", "Vírus da Grife", "Paralamas do Seu Celso", "Samara Poços"]
+let pessoas6 = ["Lúcio Fernando", "Ron Roni", "Seu Bernardo", "Luiza", "Roque", "Rita Aline", "Dr Auzio"]
+let empresas8 = ["Hotel Téo", "Pousada Ada", "Resort Orth", "Albergue Berg", "Camping Pim", "Macrohard", "Bergamota", "Amazonia", "Visionery", "HD Cimentos", "Meia Meia Meia", "Coxão do Santinho"];
+let pessoas7 = ["Pe. Ernan Buco", "Frei Dimão", "Capitão Ganso", "Junin", "PeBa", "Mano Juca", "Bilu", "Waldisney"];
+let empresas9 = ["Casa de Pastel", "Lanchonete Altas Horas", "Tio do Pavê Sobremesas", "Bolores Bolos e Flores", "Pizza Ruth", "Sanduíche-iche da Ruth", "Cereal Killer Cereal Bar", "Restaurante Contra-Filé", "Rango Star", "Acarajéssica", "Templo de Salmão", "Navegano", "Alibebe"];
+let pessoas8 = ["Guilherme Portões", "Jeferson Bezerra", "Heitor Tuga", "Gael", "Sarumano", "Márcia"];
+let empresas10 = ["Clínica Frida Calos", "Roller Store", "Taubaté Tábuas", "Vidraçaria Douglass", "Ed Som", "Gil Som", "Paty em Ação", "Mi Sungas", "Sombransheila", "Esthertica", "Pricílios", "Hanna Barbearia", "Realisa Alisamentos"];
+let pessoas9 = ["Alan Grande", "Helen Sater", "Tio Paulo", "Waldisney", "Dr Auzio", "GENéZio", "Gill Bates", "Lady Murphy", "Caio Pontes", "Mosta"];
+let empresas11 = ["Roda de Roque", "MilkSahakespeare", "Dasamassandro", "Banda Jota Qwert", "Tias Fofinhas", "Horrível Trio", "Pedro Chips", "Frutos e Fritas do Frota", "Taxi Aéreo Mamute Pequenino", "Be a Bar", "Rock in Reels", "Gê Estantes", "Adomicílios", "Abalada", "Ricárdio"];
+let pessoas10 = ["Dona Bete", "Kowalski", "Guilherme Portões", "Jeferson Bezerra", "Heitor Tuga", "Pe. Ernan Buco", "Frei Dimão", "Capitão Ganso", "Junin", "Gael", "Sarumano"];
+let empresas12 = ["A Bem Suada", "Floricultura Jorge Tadeu", "Aspirantes Aspiradores", "Indra", "jamanjo.com.br", "MA Canudos", "Harry Plotter", "Telles Transportes", "Rede Eco", "Hotel Téo"];
+let empresas13 = ["Macrohard", "Bergamota", "Amazonia", "Trajeto Pomar", "Pé Pequeno", "Visionery", "Armando Guerra", "Samara Poços", "Paralamas do Seu Celso", "Plumas de Avalon", "Vírus da Grife", "Romero Brique", "Grades Cida", "HD Cimentos", "Meia Meia Meia", "Food Park Comidas e Clichês", "Churrascaria do Gaúcho", "Taberna Periódica"];
 
 
 function listaPersonagens12() {
@@ -490,7 +494,7 @@ function exercicio38() {
     listaPessoas5()
     console.log(inclui);
 }
-function listaEmpresas7(){
+function listaEmpresas7() {
     document.getElementById("Resultado").innerHTML = " "
 
     for (let i = 0; i < empresas7.length; i++) {
@@ -499,13 +503,13 @@ function listaEmpresas7(){
         document.getElementById("Resultado").innerHTML += "<p>" + empresas7[i] + "</p>"
     }
 }
-function exercicio39(){
-    empresas7.splice(8,2)
+function exercicio39() {
+    empresas7.splice(8, 2)
     empresas7.push("Loja de sucos Uso Fruto")
     listaEmpresas7()
 }
-function listaPessoas6(){
-     document.getElementById("Resultado").innerHTML = " "
+function listaPessoas6() {
+    document.getElementById("Resultado").innerHTML = " "
 
     for (let i = 0; i < pessoas6.length; i++) {
 
@@ -513,14 +517,14 @@ function listaPessoas6(){
         document.getElementById("Resultado").innerHTML += "<p>" + pessoas6[i] + "</p>"
     }
 }
-function exercicio40(){
+function exercicio40() {
     pessoas6.pop()
     pessoas6.shift()
     let indece = pessoas6.indexOf("Luiza")
     console.log(indece);
     listaPessoas6()
 }
-function listaEmpresas8(){
+function listaEmpresas8() {
     document.getElementById("Resultado").innerHTML = " "
 
     for (let i = 0; i < empresas8.length; i++) {
@@ -529,13 +533,13 @@ function listaEmpresas8(){
         document.getElementById("Resultado").innerHTML += "<p>" + empresas8[i] + "</p>"
     }
 }
-function exercicio41(){
-empresas8.unshift("Rede Eco")
-let inclui = empresas8.includes("Macrohard")
-console.log(inclui);
-listaEmpresas8()
+function exercicio41() {
+    empresas8.unshift("Rede Eco")
+    let inclui = empresas8.includes("Macrohard")
+    console.log(inclui);
+    listaEmpresas8()
 }
-function listaPessoas7(){
+function listaPessoas7() {
     document.getElementById("Resultado").innerHTML = " "
 
     for (let i = 0; i < pessoas7.length; i++) {
@@ -544,13 +548,13 @@ function listaPessoas7(){
         document.getElementById("Resultado").innerHTML += "<p>" + pessoas7[i] + "</p>"
     }
 }
-function exercicio42(){
+function exercicio42() {
     pessoas7.unshift("PeBa")
     pessoas7.reverse()
     listaPessoas7()
 }
-function listaEmpresas9(){
- document.getElementById("Resultado").innerHTML = " "
+function listaEmpresas9() {
+    document.getElementById("Resultado").innerHTML = " "
 
     for (let i = 0; i < empresas9.length; i++) {
 
@@ -558,10 +562,123 @@ function listaEmpresas9(){
         document.getElementById("Resultado").innerHTML += "<p>" + empresas9[i] + "</p>"
     }
 }
-function exercicio43(){
+function exercicio43() {
     empresas9.push("Pamdiló Bolos")
-        listaEmpresas9()
+    listaEmpresas9()
 
     let indece = empresas9.indexOf("Pizza Ruth")
     console.log(indece)
+}
+function listaPessoas8() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < pessoas8.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + pessoas8[i] + "</p>"
+    }
+}
+function exercicio44() {
+    pessoas8.splice(2, 2)
+    let indece = pessoas8.indexOf("Sarumano")
+    console.log(indece)
+    console.log(pessoas.length)
+    listaPessoas8()
+}
+function listaEmpresa10() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < empresas10.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + empresas10[i] + "</p>"
+    }
+}
+function exercicio45() {
+    empresas10.unshift("Decorações de Coração")
+    empresas10.pop("Realisa Alisamentos")
+    empresas10.reverse()
+    listaEmpresa10()
+}
+function listaPessoas9() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < pessoas9.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + pessoas9[i] + "</p>"
+    }
+}
+function exercicio46() {
+    let inclui = pessoas9.includes("Gill Bates")
+    pessoas9.splice(6, 1)
+    console.log(inclui)
+    listaPessoas9()
+}
+function listaEmpresa11() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < empresas11.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + empresas11[i] + "</p>"
+    }
+}
+function exercicio47() {
+    empresas11.splice(0, 2)
+    empresas11.unshift("Cardiopatinha")
+    listaEmpresa11()
+}
+function listaPessoas10() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < pessoas10.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + pessoas10[i] + "</p>"
+    }
+}
+function exercicio48() {
+    pessoas10.reverse()
+    let indece = pessoas10.indexOf("Pe. Ernan Buco")
+    console.log(indece)
+    listaPessoas10()
+
+}
+function listaEmpresa12() {
+
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < empresas12.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + empresas12[i] + "</p>"
+    }
+}
+function exercicio49() {
+    empresas12.push("Pousada Ada")
+    empresas12.splice(3, 1)
+    let inclui = empresas12.indexOf("Indra")
+    console.log(inclui)
+    listaEmpresa12()
+}
+function listaEmpresa13() {
+    document.getElementById("Resultado").innerHTML = " "
+
+    for (let i = 0; i < empresas13.length; i++) {
+
+
+        document.getElementById("Resultado").innerHTML += "<p>" + empresas13[i] + "</p>"
+    }
+}
+function exercicio50(){
+    empresas13.splice(2,1)
+    empresas13.unshift("Coxão do Santinho")
+    empresas13.push("Tião Megastore")
+    empresas13.reverse()
+    let inclui = empresas13.includes("HD Cimentos")
+    console.log(inclui)
+    let indece = empresas13.indexOf("Macrohard")
+    console.log(indece)
+    listaEmpresa13()
 }
