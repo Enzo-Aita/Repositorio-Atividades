@@ -17,23 +17,24 @@
 let dinos = []
 
 function salvarDados(){
-   localStorage.setItem("dinos", JSON.stringify(dinos))
-
-   
-//    let texto = JSON.stringify(dinos)
-//    localStorage.setItem("dinos",texto)
-
+    localStorage.setItem('dinos', JSON.stringify(dinos))
+    
+    // let texto = JSON.stringify(dinos)
+    // localStorage.setItem('dinos', texto)
 }
-function carregarDados(){
-    dinos = localStorage.getItem("dinos")
 
+function carregarDados(){
+    dinos = JSON.parse(localStorage.getItem('dinos'))
+    
+    // let textoLido = localStorage.getItem('dinos')
+    // dinos = JSON.parse(textoLido)
 }
 
 function cadastrarDino() {
 
+    carregarDados()
 
-
-    let novoDino = {
+    const novoDino = {
         id: Date.now(),
         nome: document.getElementById('input-nome').value,
         altura: Number(document.getElementById("input-altura").value),
@@ -46,6 +47,8 @@ function cadastrarDino() {
 
     limparFormulario()
     mostrarTodos()
+
+    salvarDados()
 }
 
 function limparFormulario() {
@@ -76,12 +79,19 @@ function mostrarTodos(){
     }
 }
 
-// localStorage.setItem("teste",45)
-// let testeDeLeitura = localStorage.getItem("teste")
- 
-
 
 function testar() {
+    
+    // window.location.href = 'teste.html'
+
+    carregarDados()
+
+    localStorage.setItem('teste', 45)
+
+    let testeDeLeitura = localStorage.getItem('teste')
+    console.log(testeDeLeitura);
+    
+
     dinos = [
         {
             id: 1718324500001,
@@ -108,7 +118,7 @@ function testar() {
             id: 1718324500004,
             nome: "Braqui",
             altura: 13.0,
-            cor: "rgba(85, 107, 47, 1)", // Verde oliva
+            cor: "#556B2F", // Verde oliva
             custo: 250000
         },
         {
