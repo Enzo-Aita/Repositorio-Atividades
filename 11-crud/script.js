@@ -16,8 +16,24 @@
 
 let dinos = []
 
+function salvarDados(){
+   localStorage.setItem("dinos", JSON.stringify(dinos))
+
+   
+//    let texto = JSON.stringify(dinos)
+//    localStorage.setItem("dinos",texto)
+
+}
+function carregarDados(){
+    dinos = localStorage.getItem("dinos")
+
+}
+
 function cadastrarDino() {
-    const novoDino = {
+
+
+
+    let novoDino = {
         id: Date.now(),
         nome: document.getElementById('input-nome').value,
         altura: Number(document.getElementById("input-altura").value),
@@ -60,6 +76,10 @@ function mostrarTodos(){
     }
 }
 
+// localStorage.setItem("teste",45)
+// let testeDeLeitura = localStorage.getItem("teste")
+ 
+
 
 function testar() {
     dinos = [
@@ -88,7 +108,7 @@ function testar() {
             id: 1718324500004,
             nome: "Braqui",
             altura: 13.0,
-            cor: "#556B2F", // Verde oliva
+            cor: "rgba(85, 107, 47, 1)", // Verde oliva
             custo: 250000
         },
         {
