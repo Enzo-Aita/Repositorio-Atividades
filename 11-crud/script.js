@@ -14,37 +14,38 @@
 
 // console.log(dino);
 
-let dinos = []
+let cardapio = []
 
-function salvarDados(){
-    localStorage.setItem('dinos', JSON.stringify(dinos))
-    
-    // let texto = JSON.stringify(dinos)
-    // localStorage.setItem('dinos', texto)
+function salvarDados() {
+    localStorage.setItem('cardapio', JSON.stringify(cardapio))
+
+    // let texto = JSON.stringify(cardapio)
+    // localStorage.setItem('cardapio', texto)
 }
 
-function carregarDados(){
+function carregarDados() {
 
-    dinos = JSON.parse(localStorage.getItem('dinos')) || []
-    
-    // let textoLido = localStorage.getItem('dinos')
-    // dinos = JSON.parse(textoLido)
+    cardapio = JSON.parse(localStorage.getItem('cardapio')) || []
+
+    // let textoLido = localStorage.getItem('cardapio')
+    // cardapio = JSON.parse(textoLido)
 }
 
-function cadastrarDino() {
+function cadastrarProduto() {
 
     carregarDados()
 
-    const novoDino = {
+    const novoCardapio = {
         id: Date.now(),
         nome: document.getElementById('input-nome').value,
-        altura: Number(document.getElementById("input-altura").value),
-        cor: document.getElementById("input-cor").value,
-        custo: Number(document.getElementById("input-custo").value),
+        preco: Number(document.getElementById("input-preco").value),
+        categoria: document.getElementById("input-categoria").value,
+        quantidade: Number(document.getElementById("input-quantidade").value),
+        tamanho: document.getElementById("input-tamanho").value,
     }
-    dinos.push(novoDino)
+    cardapio.push(novoCardapio)
 
-    console.log(dinos);
+    console.log(cardapio);
 
     limparFormulario()
     mostrarTodos()
@@ -54,114 +55,118 @@ function cadastrarDino() {
 
 function limparFormulario() {
     document.getElementById('input-nome').value = ''
-    document.getElementById('input-altura').value = ''
-    document.getElementById('input-cor').value = ''
-    document.getElementById('input-custo').value = ''
+    document.getElementById('input-preco').value = ''
+    document.getElementById('input-categoria').value = ''
+    document.getElementById('input-quantidade').value = ''
+    document.getElementById('input-tamanho').value = ''
     document.getElementById('input-id').value = ''
 
     document.getElementById('input-nome').focus()
 }
 
-function mostrarTodos(){
-    document.getElementById('painel-dinos').innerHTML = '' 
+function mostrarTodos() {
+    document.getElementById('painel-cardapio').innerHTML = ''
 
-    for(let i=0; i<dinos.length; i++){
-        // alert(dinos[i].nome)
-        document.getElementById('painel-dinos').innerHTML += 
-        `<div class="card-dino">
-            <h2>${dinos[i].nome}</h2>
-            <p>Altura: ${dinos[i].altura}</p>
-            <p>Cor: ${dinos[i].cor}</p>
-            <p>Custo: ${dinos[i].custo}</p>
-            <p>${dinos[i].id}</p>
+    for (let i = 0; i < cardapio.length; i++) {
+        // alert(cardapio[i].nome)
+        document.getElementById('painel-cardapio').innerHTML +=
+            `<div class="card-dino">
+            <h2>${cardapio[i].nome}</h2>
+            <p>Preco: ${cardapio[i].preco}</p>
+            <p>Categoria: ${cardapio[i].categoria}</p>
+            <p>Quantidade: ${cardapio[i].quantidade}</p>
+            <p>Tamanho: ${cardapio[i].tamanho}</p>
+            <p>${cardapio[i].id}</p>
         
         </div>
-        ` 
+        `
     }
 }
 
 
-function testar() {
-    
-    // window.location.href = 'teste.html'
+// function testar() {
 
-    carregarDados()
+//     // window.location.href = 'teste.html'
 
-    localStorage.setItem('teste', 45)
+//     carregarDados()
 
-    let testeDeLeitura = localStorage.getItem('teste')
-    console.log(testeDeLeitura);
-    
+//     localStorage.setItem('teste', 45)
 
-    dinos = [
-        {
-            id: 1718324500001,
-            nome: "Rex",
-            altura: 6.1,
-            cor: "#8B4513", // Marrom
-            custo: 150000
-        },
-        {
-            id: 1718324500002,
-            nome: "Velo",
-            altura: 2.0,
-            cor: "#2E8B57", // Verde escuro
-            custo: 85000
-        },
-        {
-            id: 1718324500003,
-            nome: "Trike",
-            altura: 3.0,
-            cor: "#708090", // Cinza
-            custo: 120000
-        },
-        {
-            id: 1718324500004,
-            nome: "Braqui",
-            altura: 13.0,
-            cor: "#556B2F", // Verde oliva
-            custo: 250000
-        },
-        {
-            id: 1718324500005,
-            nome: "Ptero",
-            altura: 1.5,
-            cor: "#4682B4", // Azul aço
-            custo: 95000
-        }
-    ]
+//     let testeDeLeitura = localStorage.getItem('teste')
+//     console.log(testeDeLeitura);
 
-    console.log(dinos);
 
-}
+//     cardapio = [
+//         {
+//             id: 1718324500001,
+//             nome: "Rex",
+//             preco: 6.1,
+//             categoria: "#8B4513", // Marrom
+//             quantidade: 150000
+//         },
+//         {
+//             id: 1718324500002,
+//             nome: "Velo",
+//             preco: 2.0,
+//             categoria: "#2E8B57", // Verde escuro
+//             quantidade: 85000
+//         },
+//         {
+//             id: 1718324500003,
+//             nome: "Trike",
+//             preco: 3.0,
+//             categoria: "#708090", // Cinza
+//             quantidade: 120000
+//         },
+//         {
+//             id: 1718324500004,
+//             nome: "Braqui",
+//             preco: 13.0,
+//             categoria: "#556B2F", // Verde oliva
+//             quantidade: 250000
+//         },
+//         {
+//             id: 1718324500005,
+//             nome: "Ptero",
+//             preco: 1.5,
+//             categoria: "#4682B4", // Azul aço
+//             quantidade: 95000
+//         }
+//     ]
 
-function pesquisar(){
+//     console.log(cardapio);
+
+// }
+
+function pesquisar() {
     let nomeProcurado = document.getElementById('input-nome').value
 
-    for(let i = 0; i<dinos.length; i++){
-        if(nomeProcurado == dinos[i].nome ){
-            console.log(dinos[i]);
-            document.getElementById('input-altura').value = dinos[i].altura
-            document.getElementById('input-cor').value = dinos[i].cor
-            document.getElementById('input-custo').value = dinos[i].custo
-            document.getElementById('input-id').value = dinos[i].id
+    for (let i = 0; i < cardapio.length; i++) {
+        if (nomeProcurado == cardapio[i].nome) {
+            console.log(cardapio[i]);
+            document.getElementById('input-preco').value = cardapio[i].preco
+            document.getElementById('input-categoria').value = cardapio[i].categoria
+            document.getElementById('input-quantidade').value = cardapio[i].quantidade
+            document.getElementById('input-tamanho').value = cardapio[i].tamanho
+            document.getElementById('input-id').value = cardapio[i].id
             console.log(i);
         }
-        
+
     }
 
 }
 
-function salvarDino(){
+function salvarDino() {
     let id = Number(document.getElementById('input-id').value)
 
-    for(let i = 0; i<dinos.length; i++){
-        if(id == dinos[i].id ){
-            console.log(dinos[i]);
-            dinos[i].altura = document.getElementById('input-altura').value 
-            dinos[i].cor = document.getElementById('input-cor').value 
-            dinos[i].custo = document.getElementById('input-custo').value 
-            dinos[i].id = document.getElementById('input-id').value 
+    for (let i = 0; i < cardapio.length; i++) {
+        if (id == cardapio[i].id) {
+            console.log(cardapio[i]);
+            cardapio[i].preco = document.getElementById('input-preco').value
+            cardapio[i].categoria = document.getElementById('input-categoria').value
+            cardapio[i].quantidade = document.getElementById('input-quantidade').value
+            cardapio[i].tamanho = document.getElementById('input-tamanho').value
+            cardapio[i].id = document.getElementById('input-id').value
             console.log(i);
         }
     }
@@ -169,13 +174,13 @@ function salvarDino(){
     limparFormulario()
 }
 
-function excluirDino(){
+function excluirDino() {
     let id = Number(document.getElementById('input-id').value)
 
-    for(let i = 0; i<dinos.length; i++){
-        if(id == dinos[i].id ){
-            console.log(dinos[i]);
-            dinos.splice(i, 1)
+    for (let i = 0; i < cardapio.length; i++) {
+        if (id == cardapio[i].id) {
+            console.log(cardapio[i]);
+            cardapio.splice(i, 1)
             console.log(i);
         }
     }
