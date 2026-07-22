@@ -65,3 +65,6 @@ body{
     align-items: center;
 
 }
+#div-id{
+    display: none;
+}
